@@ -30,13 +30,14 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.85);
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   z-index: 2;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  background-color: var(--background-color);
 }
 
 .navbar-brand {
@@ -136,8 +137,4 @@ body {
   filter: contrast(1.05) brightness(1.03);
 }
 
-/* 
-ToDo: 
-* Hover states (Possible focus state) 
-
-*/
+/* About Section */
