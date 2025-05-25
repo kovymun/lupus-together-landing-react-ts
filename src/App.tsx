@@ -1,4 +1,4 @@
-import About from "./components/About";
+// import About from "./components/About";
 import Hero from "./components/Hero";
 import Members from "./components/Members";
 import Navbar from "./components/Navbar";
@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <About />
+        {/* <About /> */}
         <Members />
       </main>
     </>
