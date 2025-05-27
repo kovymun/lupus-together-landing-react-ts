@@ -23,8 +23,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
-  width: 100%;
-  border: 5px solid red;
 }
 
 /* Navbar */
@@ -146,7 +144,7 @@ body {
   padding: 4rem 2rem;
   background-color: #faf8fc;
   text-align: center;
-  max-width: 75%;
+  /* max-width: 100%; */
   margin: 0 auto;
 }
 
@@ -155,4 +153,63 @@ body {
   margin-bottom: 1rem;
   color: var(--primary-color);
   font-weight: bold;
+}
+
+.members-grid {
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.member-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.member-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #d2b8e1;
+}
+
+.member-role {
+  font-size: 0.95rem;
+  color: #7a529c;
+  margin-bottom: 1rem;
+}
+
+.member-message {
+  font-style: italic;
+  color: #555555;
+  margin-bottom: 1rem;
+}
+
+.member-contact {
+  font-size: 0.85rem;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+.member-contact a {
+  color: #57227d;
+  text-decoration: none;
+}
+
+.member-contact a:hover {
+  text-decoration: underline;
 }
