@@ -1,16 +1,55 @@
+import { Link } from "react-scroll";
+
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-brand">Lupus Together</div>
+      <Link
+        to="home"
+        spy={true}
+        smooth={true}
+        // offset={-80}
+        duration={500}
+        activeClass="active"
+      >
+        <div className="navbar-brand">Lupus Together</div>
+      </Link>
+
       <ul className="navbar-links">
         <li>
-          <a href="#about">About</a>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+            activeClass="active"
+          >
+            About
+          </Link>
         </li>
         <li>
-          <a href="#stories">Stories</a>
+          <Link
+            to="stories"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+            activeClass="active"
+          >
+            Stories
+          </Link>
         </li>
         <li>
-          <a href="#contact">Get in Touch</a>
+          <Link
+            to="members"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+            activeClass="active"
+          >
+            Meet the Team
+          </Link>
         </li>
       </ul>
       <button className="navbar-cta">Let's Connect</button>

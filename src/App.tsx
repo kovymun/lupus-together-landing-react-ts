@@ -1,7 +1,8 @@
-// import About from "./components/About";
+import About from "./components/About";
 import Hero from "./components/Hero";
 import Members from "./components/Members";
 import Navbar from "./components/Navbar";
+import Stories from "./components/Stories";
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        {/* <About /> */}
+        <About />
+        <Stories />
         <Members />
       </main>
     </>
