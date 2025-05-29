@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../lib/supabaseClient";
+import { Element } from "react-scroll";
 
 interface Members {
   id: number;
@@ -30,32 +31,34 @@ const Members = () => {
   }, []);
 
   return (
-    <section className="members-section">
-      <div className="members-section-intro">
-        <h2 className="section-title">Meet the Team</h2>
-      </div>
-      <div className="members-grid">
-        {members.map(
-          ({ id, full_name, role, email, phone, message, profile_img }) => (
-            <div className="member-card" key={id}>
-              <img
-                src={profile_img}
-                alt="Profile-pic"
-                className="member-image"
-                loading="lazy"
-              />
-              <h3 className="member-name" style={{ color: "red" }}>
-                {full_name}
-              </h3>
-              <p className="member-role">{role}</p>
-              <p className="member-message">{message}</p>
-              <p className="member-contact">
-                <strong>Email:</strong> <a href={`mailto:${email}`}>{email}</a>
-                <br />
-                <strong>Phone:</strong> <a href={`tel:${phone}`}>{phone}</a>
-              </p>
-              <div className="member-socials">
-                <a
+    <Element name="members">
+      <section className="members-section">
+        <div className="members-section-intro">
+          <h2 className="section-title">Meet the Team</h2>
+        </div>
+        <div className="members-grid">
+          {members.map(
+            ({ id, full_name, role, email, phone, message, profile_img }) => (
+              <div className="member-card" key={id}>
+                <img
+                  src={profile_img}
+                  alt="Profile-pic"
+                  className="member-image"
+                  loading="lazy"
+                />
+                <h3 className="member-name" style={{ color: "red" }}>
+                  {full_name}
+                </h3>
+                <p className="member-role">{role}</p>
+                <p className="member-message">{message}</p>
+                <p className="member-contact">
+                  <strong>Email:</strong>{" "}
+                  <a href={`mailto:${email}`}>{email}</a>
+                  <br />
+                  <strong>Phone:</strong> <a href={`tel:${phone}`}>{phone}</a>
+                </p>
+                <div className="member-socials">
+                  {/* <a
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -78,8 +81,8 @@ const Members = () => {
                       transform="translate(313.9375,99.75)"
                     />
                   </svg>
-                </a>
-                {/* <a
+                </a> */}
+                  {/* <a
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -87,7 +90,7 @@ const Members = () => {
                 >
                   <FaInstagram />
                 </a> */}
-                {/* <a
+                  {/* <a
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -95,7 +98,7 @@ const Members = () => {
                 >
                   <FaTwitter />
                 </a> */}
-                {/* <a
+                  {/* <a
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -103,12 +106,13 @@ const Members = () => {
                 >
                   <FaThreads />
                 </a> */}
+                </div>
               </div>
-            </div>
-          )
-        )}
-      </div>
-    </section>
+            )
+          )}
+        </div>
+      </section>
+    </Element>
   );
 };
 
