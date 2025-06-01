@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import "../styles/navbar.css";
 
 const Navbar = () => {
   return (
@@ -52,7 +53,10 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <button className="navbar-cta">Let's Connect</button>
+      <div className="navbar-phone-btn">
+        <div className="default-text">Contact Us</div>
+        <div className="hover-text">011-456-7890</div>
+      </div>
     </nav>
   );
 };

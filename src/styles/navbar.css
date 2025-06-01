@@ -1,0 +1,48 @@
+:root {
+  --primary-color: #7b6cf6;
+  --secondary-color: #d69585;
+  --background-color: #faf7f5;
+  --text-color: #333333;
+  --primary-font-family: "Quicksand", sans-serif;
+  --secondary-font-family: "Playfair Display", Georgia;
+}
+
+.navbar-phone-btn {
+  position: relative;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: background-color 400ms ease;
+}
+
+.navbar-phone-btn .hover-text,
+.navbar-phone-btn .default-text {
+  display: block;
+  width: 100%;
+  text-align: center;
+  transition: all 400ms ease;
+}
+
+.navbar-phone-btn .hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navbar-phone-btn:hover .hover-text {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.navbar-phone-btn:hover .default-text {
+  opacity: 0;
+}
