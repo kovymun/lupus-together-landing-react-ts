@@ -46,3 +46,25 @@
 .navbar-phone-btn:hover .default-text {
   opacity: 0;
 }
+
+/* Hide Hamburger by default */
+.navbar-toggle {
+  display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-links,
+  .navbar-phone-btn {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
