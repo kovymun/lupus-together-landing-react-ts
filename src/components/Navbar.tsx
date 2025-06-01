@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import { FaBars } from "react-icons/fa";
 import "../styles/navbar.css";
 
 const Navbar = () => {
@@ -56,6 +57,11 @@ const Navbar = () => {
       <div className="navbar-phone-btn">
         <div className="default-text">Contact Us</div>
         <div className="hover-text">011-456-7890</div>
+      </div>
+
+      {/* Hamburger Menu - visible only on mobile */}
+      <div className="navbar-toggle">
+        <FaBars size={24} />
       </div>
     </nav>
   );
