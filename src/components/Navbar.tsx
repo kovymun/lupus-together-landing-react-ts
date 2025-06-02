@@ -1,8 +1,21 @@
+import { useState } from "react";
 import { Link } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 import "../styles/navbar.css";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const handleNavToggle = (): void => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  console.log(isMenuOpen);
+
+  const handleLinkSelect = (): void => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <Link
@@ -16,7 +29,7 @@ const Navbar = () => {
         <div className="navbar-brand">Lupus Together</div>
       </Link>
 
-      <ul className="navbar-links">
+      <ul className={`navbar-links ${isMenuOpen ? "mobile-nav-active" : ""}`}>
         <li>
           <Link
             to="about"
@@ -25,6 +38,7 @@ const Navbar = () => {
             offset={-80}
             duration={500}
             activeClass="active"
+            onClick={handleLinkSelect}
           >
             About
           </Link>
@@ -37,6 +51,7 @@ const Navbar = () => {
             offset={-80}
             duration={500}
             activeClass="active"
+            onClick={handleLinkSelect}
           >
             Stories
           </Link>
@@ -49,6 +64,7 @@ const Navbar = () => {
             offset={-80}
             duration={500}
             activeClass="active"
+            onClick={handleLinkSelect}
           >
             Meet the Team
           </Link>
@@ -60,9 +76,13 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger Menu - visible only on mobile */}
-      <div className="navbar-toggle">
+      <button className="navbar-toggle" onClick={handleNavToggle}>
         <FaBars size={24} />
-      </div>
+      </button>
+
+      {isMenuOpen && (
+        <div className="mobile-nav-overlay" onClick={handleNavToggle} />
+      )}
     </nav>
   );
 };
