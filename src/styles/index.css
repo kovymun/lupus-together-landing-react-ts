@@ -14,57 +14,11 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: var(--primary-font-family);
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
-}
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  z-index: 2;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-  background-color: var(--background-color);
-}
-
-.navbar-brand {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: var(--primary-color);
-}
-
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 3rem;
-}
-
-.navbar-links a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
-}
-
-.navbar-cta {
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 /* Hero Section */
