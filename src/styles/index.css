@@ -49,6 +49,7 @@ body {
   margin-bottom: 1.5rem;
   color: var(--text-color);
   font-family: var(--secondary-font-family);
+  letter-spacing: 0.05em;
 }
 
 .hero-cta {
@@ -103,7 +104,7 @@ body {
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /*Fluid-typography*/
   margin-bottom: 1rem;
   color: var(--primary-color);
   font-weight: bold;
@@ -120,7 +121,7 @@ body {
 }
 
 .member-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);

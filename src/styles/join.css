@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #7b6cf6;
+  --secondary-color: #d69585;
+  --accent-color: #ff8c42;
+  --text-color: #333333;
+  --muted-text-color: #777777;
+  --input-border: #ccc;
+  --input-focus-border: var(--primary-color);
+  --background-color: #faf7f5;
+  --primary-font-family: "Quicksand", sans-serif;
+  --secondary-font-family: "Playfair Display", Georgia;
+}
+
+.join-section {
+  background-color: var(--background-color);
+  padding: 4em 2em;
+  text-align: center;
+  font-family: var(--primary-font-family);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.join-section p {
+  font-family: var(--secondary-font-family);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--text-color);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  letter-spacing: 0.05em;
+}
+
+.join-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Label styling */
+.input-container label {
+  width: 180px;
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-color);
+}
+/* Input and textarea styles */
+.input-container input,
+.input-container textarea {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.3s ease;
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+  border-color: var(--input-focus-border);
+  outline: none;
+}
+
+.input-container textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* Consent checkbox container */
+
+.consent {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: left;
+  font-size: clamp(0.9rem, 1vw + 0.2rem, 1.1rem);
+  color: var(--text-color);
+}
+
+.join-form button {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--primary-font-family);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-form button:hover {
+  background-color: #c07c6c;
+}
+
+/* Responsive stylings for the form + from section */
+@media (max-width: 425px) {
+  .input-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-container label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .input-container input,
+  .input-container textarea {
+    width: 100%;
+  }
+
+  .join-form button {
+    width: 100%;
+    text-align: center;
+  }
+}
