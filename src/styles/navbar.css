@@ -90,6 +90,7 @@
 /* Hamburger Hidden by Default */
 .navbar-toggle {
   display: none;
+  color: var(--primary-color);
 }
 
 /* Mobile Nav Overlay */
@@ -187,5 +188,22 @@
     background: none;
     border: none;
     z-index: 10;
+  }
+
+  .navbar-links .active {
+    font-weight: normal;
+    color: inherit;
+    border-bottom: none;
+  }
+}
+
+/* Larger screen styling */
+
+@media screen and (min-width: 768px) {
+  .navbar-links .active {
+    font-weight: bold;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    transition: all 0.3s ease;
   }
 }
