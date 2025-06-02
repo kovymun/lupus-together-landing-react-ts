@@ -11,8 +11,15 @@ Built with React + TypeScript, styled using Vanilla CSS with CSS Variables, and 
 - Floating Navbar
 - Story-driven Layout
 - Fully Responsive
+- Smooth Scrolling - react scroll
 
 ### Tech Stack
 
 - React with TypeScript
 - Vanilla CSS
+
+#### Task checklist
+
+- [x] Responsive mobile nav functionality
+- [x] Active nav-link styling
+- [ ] About section content copy-writing

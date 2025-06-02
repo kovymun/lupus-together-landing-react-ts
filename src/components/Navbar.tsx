@@ -18,14 +18,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <Link
-        to="home"
-        spy={true}
-        smooth={true}
-        // offset={-80}
-        duration={500}
-        activeClass="active"
-      >
+      <Link to="home" spy={true} smooth={true} offset={-80} duration={500}>
         <div className="navbar-brand">Lupus Together</div>
       </Link>
 
