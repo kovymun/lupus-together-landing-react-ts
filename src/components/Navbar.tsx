@@ -62,7 +62,21 @@ const Navbar = () => {
             Meet the Team
           </Link>
         </li>
+        <li>
+          <Link
+            to="join"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+            activeClass="active"
+            onClick={handleLinkSelect}
+          >
+            Get Involved
+          </Link>
+        </li>
       </ul>
+
       <div className="navbar-phone-btn">
         <div className="default-text">Contact Us</div>
         <div className="hover-text">011-456-7890</div>
