@@ -48,8 +48,8 @@ const Stories = () => {
   return (
     <Element name="stories">
       <section className="stories-section">
-        <div className="stories-header">
-          <h2>Real Stories. Real Strength.</h2>
+        <div className="section-header">
+          <h2 className="section-title">Real Stories. Real Strength.</h2>
           <p>
             Hear from people who truly understand your journey. These heartfelt
             stories are a testament to the power of connection, courage, and
