@@ -6,11 +6,15 @@ const JoinForm = () => {
     <Element name="join">
       <section id="join" className="join-section">
         <div className="join-container">
-          <h2 className="section-title">Let's Walk This Journey Together</h2>
-          <p>
-            Join a community that understands your journey - share your story,
-            connect with others, and be inspired.
-          </p>
+          <div className="section-header">
+            {" "}
+            <h2 className="section-title">Let's Walk This Journey Together</h2>
+            <p>
+              Join a community that understands your journey - share your story,
+              connect with others, and be inspired.
+            </p>
+          </div>
+
           <div className="container">
             <form className="join-form">
               <div className="input-container">
