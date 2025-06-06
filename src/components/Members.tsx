@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../lib/supabaseClient";
 import { Element } from "react-scroll";
+import "../styles/members.css";
 
 interface Members {
   id: number;
@@ -41,6 +42,35 @@ const Members = () => {
               inventore delectus, veritatis pariatur atque porro ipsam quos non
               suscipit nostrum!
             </p>
+          </div>
+          <div className="members-grid">
+            {members.map(
+              ({ id, full_name, role, email, phone, message, profile_img }) => (
+                <div className="member-card" key={id}>
+                  <img
+                    src={profile_img}
+                    alt="Profile-pic"
+                    className="member-image"
+                    loading="lazy"
+                  />
+                  <div className="overlay overlay-blur">
+                    <h3 className="member-name">{full_name}</h3>
+                    <p className="member-role">{role}</p>
+                    <p className="member-message">{message}</p>
+                    <div className="member-contact">
+                      <div className="member-email">
+                        <strong>Email:</strong>{" "}
+                        <a href={`mailto:${email}`}>{email}</a>
+                      </div>
+                      <div className="member-phone">
+                        <strong>Phone:</strong>{" "}
+                        <a href={`tel:${phone}`}>{phone}</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            )}
           </div>
         </div>
       </section>
