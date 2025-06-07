@@ -23,11 +23,19 @@ body {
   line-height: 1.6;
 }
 
+section:not(#hero) {
+  background-color: var(--background-color);
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .section-wrapper {
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   margin: 2em;
   padding: 2em;
+  /* border: 2px solid red; */
 }
 
 .section-header {
@@ -122,4 +130,11 @@ body {
   filter: contrast(1.05) brightness(1.03);
 }
 
-/* About Section */
+/* Responsive Styling */
+
+@media (max-width: 425px) {
+  .section-wrapper {
+    margin: 1em;
+    padding: 2em;
+  }
+}

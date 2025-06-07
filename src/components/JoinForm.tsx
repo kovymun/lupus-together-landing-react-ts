@@ -5,7 +5,8 @@ const JoinForm = () => {
   return (
     <Element name="join">
       <section id="join" className="join-section">
-        <div className="join-container">
+        <div className="section-wrapper">
+          {" "}
           <div className="section-header">
             {" "}
             <h2 className="section-title">Let's Walk This Journey Together</h2>
@@ -14,7 +15,6 @@ const JoinForm = () => {
               connect with others, and be inspired.
             </p>
           </div>
-
           <div className="container">
             <form className="join-form">
               <div className="input-container">

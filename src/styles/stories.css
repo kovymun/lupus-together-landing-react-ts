@@ -17,7 +17,6 @@
   font-family: var(--primary-font-family);
   color: var(--text-color);
   max-width: 100%;
-  border: 3px solid red;
   margin: 2em;
 }
 

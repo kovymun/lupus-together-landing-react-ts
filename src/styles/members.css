@@ -7,19 +7,19 @@
   --muted-text-color: #777777;
   --input-border: #ccc;
   --input-focus-border: var(--primary-color);
-  --background-color: #faf7f5;
+  /* --background-color: #faf7f5; */
   --primary-font-family: "Quicksand", sans-serif;
   --secondary-font-family: "Playfair Display", Georgia;
 }
 
-.members-section {
+/* .members-section {
   background-color: var(--background-color);
-  /* padding: 4rem 2rem; */
-  /* background-color: #faf8fc; */
+  padding: 4rem 2rem;
+  background-color: #faf8fc;
   text-align: center;
   max-width: 100%;
   margin: 0 auto;
-}
+} */
 
 .members-grid {
   /* border: 2px solid black; */
@@ -35,13 +35,14 @@
   background: #ffffff;
   border-radius: 1rem;
   position: relative;
+
   /* padding: 2rem; */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
   /* transition: transform 0.2s ease, box-shadow 0.2s ease; */
 }
 
 .member-image {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
   /* border-radius: 50%; */
