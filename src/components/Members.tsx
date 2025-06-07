@@ -7,6 +7,7 @@ interface Members {
   id: number;
   full_name: string;
   role: string;
+  bio: string;
   email: string;
   phone: string;
   message: string;
@@ -48,23 +49,31 @@ const Members = () => {
           </div>
           <div className="members-grid">
             {members.map(
-              (
-                { id, full_name, role, email, phone, message, profile_img },
-                index
-              ) => (
+              ({
+                id,
+                full_name,
+                role,
+                bio,
+                email,
+                phone,
+                message,
+                profile_img,
+              }) => (
                 <div className="member-card" key={id}>
                   <img
                     src={profile_img}
                     alt="Profile-pic"
                     className="member-image"
                     loading="lazy"
-                    style={{
-                      filter: index === 0 ? "grayscale(100%)" : "",
-                    }}
+                    // style={{
+                    //   filter:
+                    //     index === 0 ? "saturate(50%), brightness(50%)" : "",
+                    // }}
                   />
                   <div className="overlay overlay-blur">
                     <h3 className="member-name">{full_name}</h3>
                     <p className="member-role">{role}</p>
+                    <p className="member-bio">{bio}</p>
                     <p className="member-message">{message}</p>
                     <div className="member-contact">
                       <div className="member-email">
