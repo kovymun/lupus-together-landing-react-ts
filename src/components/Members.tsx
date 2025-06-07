@@ -40,11 +40,16 @@ const Members = () => {
       <section className="members-section">
         <div className="section-wrapper">
           <div className="section-header">
-            <h2 className="section-title">Meet the Team</h2>
+            <h2 className="section-title">
+              Meet the People Behind Lupus Together
+            </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              inventore delectus, veritatis pariatur atque porro ipsam quos non
-              suscipit nostrum!
+              At Lupus Together, we're fighters, caregivers, and advocates who
+              turned our stories into strength. Our lived experience drives
+              everything we do - creating a safe space for real lupus support
+              and real understanding. These are the hearts behind our mission -
+              here to walk with you, uplift you, and make sure no one faces
+              lupus alone.
             </p>
           </div>
           <div className="members-grid">
