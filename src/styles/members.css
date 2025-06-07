@@ -22,7 +22,7 @@
 }
 
 .members-grid {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
@@ -50,8 +50,9 @@
   height: 100%;
   object-fit: cover;
   /* border-radius: 50%; */
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   /* border: 3px solid #d2b8e1; */
+  filter: brightness(50%), saturate(60%);
 }
 
 .overlay {
@@ -81,13 +82,16 @@
 
 .member-role {
   font-size: 0.95rem;
-  /* color: #7a529c; */
   margin-bottom: 1rem;
+}
+
+.member-bio {
+  margin-bottom: 1rem;
+  text-wrap: balance;
 }
 
 .member-message {
   font-style: italic;
-  /* color: #555555; */
   margin-bottom: 1rem;
   text-wrap: balance;
 }
