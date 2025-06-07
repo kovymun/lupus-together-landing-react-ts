@@ -19,7 +19,10 @@ const Members = () => {
 
   useEffect(() => {
     const fetchMembers = async () => {
-      const { data, error } = await supabase.from("team_members").select("*");
+      const { data, error } = await supabase
+        .from("team_members")
+        .select("*")
+        .order("id", { ascending: true });
       if (error) {
         console.error("Error fetching members:", error);
       } else {
@@ -45,13 +48,19 @@ const Members = () => {
           </div>
           <div className="members-grid">
             {members.map(
-              ({ id, full_name, role, email, phone, message, profile_img }) => (
+              (
+                { id, full_name, role, email, phone, message, profile_img },
+                index
+              ) => (
                 <div className="member-card" key={id}>
                   <img
                     src={profile_img}
                     alt="Profile-pic"
                     className="member-image"
                     loading="lazy"
+                    style={{
+                      filter: index === 0 ? "grayscale(100%)" : "",
+                    }}
                   />
                   <div className="overlay overlay-blur">
                     <h3 className="member-name">{full_name}</h3>
