@@ -33,22 +33,17 @@
 
 .member-card {
   background: #ffffff;
-  border-radius: 1rem;
   position: relative;
-
   /* padding: 2rem; */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
   /* transition: transform 0.2s ease, box-shadow 0.2s ease; */
 }
 
 .member-image {
-  max-width: 100%;
-  height: 100%;
+  max-inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
-  /* border-radius: 50%; */
-  /* margin-bottom: 1rem; */
-  /* border: 3px solid #d2b8e1; */
-  filter: brightness(50%), saturate(60%);
+  filter: brightness(110%);
 }
 
 .overlay {
