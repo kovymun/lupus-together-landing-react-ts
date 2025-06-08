@@ -12,6 +12,7 @@ interface Members {
   phone: string;
   message: string;
   profile_img: string;
+  alt: string;
 }
 
 const Members = () => {
@@ -63,11 +64,12 @@ const Members = () => {
                 phone,
                 message,
                 profile_img,
+                alt,
               }) => (
                 <div className="member-card" key={id}>
                   <img
                     src={profile_img}
-                    alt="Profile-pic"
+                    alt={alt}
                     className="member-image"
                     loading="lazy"
                     // style={{
