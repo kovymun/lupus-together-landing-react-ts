@@ -55,29 +55,32 @@ const Members = () => {
           </div>
           <div className="members-grid">
             {members.map(
-              ({
-                id,
-                full_name,
-                role,
-                bio,
-                email,
-                phone,
-                message,
-                profile_img,
-                alt,
-              }) => (
+              (
+                {
+                  id,
+                  full_name,
+                  role,
+                  bio,
+                  email,
+                  phone,
+                  message,
+                  profile_img,
+                  alt,
+                },
+                index
+              ) => (
                 <div className="member-card" key={id}>
                   <img
                     src={profile_img}
                     alt={alt}
                     className="member-image"
                     loading="lazy"
-                    // style={{
-                    //   filter:
-                    //     index === 0 ? "saturate(50%), brightness(50%)" : "",
-                    // }}
+                    style={{
+                      filter:
+                        index === 0 ? "saturate(50%), brightness(50%)" : "",
+                    }}
                   />
-                  <div className="overlay overlay-blur">
+                  <div className="overlay">
                     <h3 className="member-name">{full_name}</h3>
                     <p className="member-role">{role}</p>
                     <p className="member-bio">{bio}</p>
