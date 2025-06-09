@@ -19,7 +19,6 @@ const Hero = () => {
           <img
             src="../src/assets/holding-hands.webp"
             alt="People holding hands, symbolizing community and empathy for people with Lupus"
-            loading="lazy"
           />
         </div>
       </section>
