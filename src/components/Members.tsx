@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../lib/supabaseClient";
 import { Element } from "react-scroll";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaThreads,
+} from "react-icons/fa6";
 import "../styles/members.css";
 
 interface Members {
@@ -17,7 +23,12 @@ interface Members {
 
 const Members = () => {
   const [members, setMembers] = useState<Members[]>([]);
+  const [expandedCards, setExpandedCards] = useState<{
+    [key: number]: boolean;
+  }>({});
+
   console.log(members);
+  console.log("is open?", expandedCards);
 
   useEffect(() => {
     const fetchMembers = async () => {
@@ -35,6 +46,13 @@ const Members = () => {
 
     fetchMembers();
   }, []);
+
+  const toggleText = (id: number) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
 
   return (
     <Element name="members">
@@ -55,49 +73,90 @@ const Members = () => {
           </div>
           <div className="members-grid">
             {members.map(
-              (
-                {
-                  id,
-                  full_name,
-                  role,
-                  bio,
-                  email,
-                  phone,
-                  message,
-                  profile_img,
-                  alt,
-                },
-                index
-              ) => (
-                <div className="member-card" key={id}>
-                  <img
-                    src={profile_img}
-                    alt={alt}
-                    className="member-image"
-                    loading="lazy"
-                    style={{
-                      filter:
-                        index === 0 ? "saturate(50%), brightness(50%)" : "",
-                    }}
-                  />
-                  <div className="overlay">
-                    <h3 className="member-name">{full_name}</h3>
-                    <p className="member-role">{role}</p>
-                    <p className="member-bio">{bio}</p>
-                    <p className="member-message">{message}</p>
-                    <div className="member-contact">
-                      <div className="member-email">
-                        <strong>Email:</strong>{" "}
-                        <a href={`mailto:${email}`}>{email}</a>
-                      </div>
-                      <div className="member-phone">
-                        <strong>Phone:</strong>{" "}
-                        <a href={`tel:${phone}`}>{phone}</a>
-                      </div>
+              ({
+                id,
+                full_name,
+                role,
+                bio,
+                email,
+                phone,
+                message,
+                profile_img,
+                alt,
+              }) => {
+                const isExpanded = expandedCards[id];
+                return (
+                  <div className="member-card" key={id}>
+                    <img
+                      src={profile_img}
+                      alt={alt}
+                      className="member-image"
+                      loading="lazy"
+                    />
+                    <div className="card-content">
+                      <h3 className="member-name">{full_name}</h3>
+                      <p className="member-role">{role}</p>
+                      <p className="member-bio">{bio}</p>
+                      {isExpanded && (
+                        <div>
+                          <p className="member-message">{message}</p>
+                          <div className="member-contact">
+                            <div className="member-email">
+                              <strong>Email:</strong>{" "}
+                              <a href={`mailto:${email}`}>{email}</a>
+                            </div>
+                            <div className="member-phone">
+                              <strong>Phone:</strong>{" "}
+                              <a href={`tel:${phone}`}>{phone}</a>
+                            </div>
+                          </div>
+                          <div className="member-socials">
+                            <a
+                              href="#"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label="Facebook"
+                            >
+                              <FaFacebookF />
+                            </a>
+                            <a
+                              href="#"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label="Instagram"
+                            >
+                              <FaInstagram />
+                            </a>
+                            <a
+                              href="#"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label="Twitter"
+                            >
+                              <FaTwitter />
+                            </a>
+                            <a
+                              href="#"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label="Threads"
+                            >
+                              <FaThreads />
+                            </a>
+                          </div>
+                        </div>
+                      )}
+
+                      <button
+                        className="toggle-button"
+                        onClick={() => toggleText(id)}
+                      >
+                        {isExpanded ? "Show Less" : "Show More"}
+                      </button>
                     </div>
                   </div>
-                </div>
-              )
+                );
+              }
             )}
           </div>
         </div>
