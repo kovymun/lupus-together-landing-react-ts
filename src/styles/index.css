@@ -76,14 +76,16 @@ section:not(#hero) {
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
   color: var(--primary-color);
   margin-bottom: 0.2rem;
   font-weight: 800;
 }
 
 .hero-content p {
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.1rem);
   margin-bottom: 1.5rem;
   color: var(--text-color);
   font-family: var(--secondary-font-family);
@@ -92,12 +94,21 @@ section:not(#hero) {
 
 .hero-cta {
   padding: 0.75rem 1.25rem;
+  font-size: clamp(0.9rem, 0.6vw + 0.5rem, 1rem);
   background-color: var(--secondary-color);
   color: #ffffff;
   border: none;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-cta:hover {
+  background-color: #bf7262;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
 }
 
 .hero-image {
@@ -136,5 +147,11 @@ section:not(#hero) {
   .section-wrapper {
     margin: 1em;
     padding: 2em;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-image {
+    display: none;
   }
 }
