@@ -48,37 +48,38 @@ const Stories = () => {
   return (
     <Element name="stories">
       <section className="stories-section">
-        <div className="section-header">
-          <h2 className="section-title">Real Stories. Real Strength.</h2>
-          <p>
-            Hear from people who truly understand your journey. These heartfelt
-            stories are a testament to the power of connection, courage, and
-            community.
-          </p>
-        </div>
-
-        <div className="stories-grid">
-          {stories.map(({ id, image, name, role, location, message }) => (
-            <div className="story-card" key={id}>
-              <img
-                src={image}
-                alt={name}
-                className="story-image"
-                loading="lazy"
-              />
-              <div className="story-info">
-                <h3>{name}</h3>
-                <p className="story-role">
-                  {role} · {location}
-                </p>
-                <p className="story-message">{message}</p>
+        <div className="section-wrapper">
+          {" "}
+          <div className="section-header">
+            <h2 className="section-title">Real Stories. Real Strength.</h2>
+            <p>
+              Hear from people who truly understand your journey. These
+              heartfelt stories are a testament to the power of connection,
+              courage, and community.
+            </p>
+          </div>
+          <div className="stories-grid">
+            {stories.map(({ id, image, name, role, location, message }) => (
+              <div className="story-card" key={id}>
+                <img
+                  src={image}
+                  alt={name}
+                  className="story-image"
+                  loading="lazy"
+                />
+                <div className="story-info">
+                  <h3>{name}</h3>
+                  <p className="story-role">
+                    {role} · {location}
+                  </p>
+                  <p className="story-message">{message}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="cta-container">
-          <button className="cta-button">Share Your Story</button>
+            ))}
+          </div>
+          <div className="cta-container">
+            <button className="cta-button">Share Your Story</button>
+          </div>
         </div>
       </section>
     </Element>
