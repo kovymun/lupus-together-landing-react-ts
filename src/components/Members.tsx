@@ -73,17 +73,20 @@ const Members = () => {
           </div>
           <div className="members-grid">
             {members.map(
-              ({
-                id,
-                full_name,
-                role,
-                bio,
-                email,
-                phone,
-                message,
-                profile_img,
-                alt,
-              }) => {
+              (
+                {
+                  id,
+                  full_name,
+                  role,
+                  bio,
+                  email,
+                  phone,
+                  message,
+                  profile_img,
+                  alt,
+                },
+                index
+              ) => {
                 const isExpanded = expandedCards[id];
                 return (
                   <div className="member-card" key={id}>
@@ -92,6 +95,14 @@ const Members = () => {
                       alt={alt}
                       className="member-image"
                       loading="lazy"
+                      style={{
+                        filter:
+                          index === 0
+                            ? "brightness(105%) saturate(90%)"
+                            : index === 1
+                            ? "brightness(95%) saturate(90%)"
+                            : "",
+                      }}
                     />
                     <div className="card-content">
                       <h3 className="member-name">{full_name}</h3>
@@ -106,8 +117,7 @@ const Members = () => {
                               <a href={`mailto:${email}`}>{email}</a>
                             </div>
                             <div className="member-phone">
-                              <strong>Phone:</strong>{" "}
-                              <a href={`tel:${phone}`}>{phone}</a>
+                              <strong>Phone:</strong> <span>{phone}</span>
                             </div>
                           </div>
                           <div className="member-socials">
