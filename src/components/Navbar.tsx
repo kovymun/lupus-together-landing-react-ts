@@ -38,6 +38,19 @@ const Navbar = () => {
         </li>
         <li>
           <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+            activeClass="active"
+            onClick={handleLinkSelect}
+          >
+            Understanding Lupus
+          </Link>
+        </li>
+        <li>
+          <Link
             to="stories"
             spy={true}
             smooth={true}

@@ -1,0 +1,40 @@
+/* understandingLupus.css */
+:root {
+  --primary-color: #7b6cf6;
+  --secondary-color: #d69585;
+  --accent-color: #ff8c42;
+  --text-color: #333333;
+  --muted-text-color: #777777;
+  --primary-font-family: "Quicksand", sans-serif;
+  --secondary-font-family: "Playfair Display", Georgia;
+}
+
+.lupus-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.lupus-text {
+  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.75rem;
+  }
+
+  .section-subtext {
+    font-size: 1.25rem;
+  }
+
+  .lupus-text {
+    font-size: 1.125rem;
+  }
+}
