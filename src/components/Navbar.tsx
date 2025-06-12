@@ -38,7 +38,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            to="about"
+            to="lupus"
             spy={true}
             smooth={true}
             offset={-80}
