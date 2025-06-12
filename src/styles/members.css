@@ -10,7 +10,7 @@
 }
 .members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   justify-content: center;
   align-items: stretch;
@@ -27,9 +27,9 @@
   transition: transform 0.2s ease-in-out;
 }
 
-.member-card:hover {
+/* .member-card:hover {
   transform: translateY(-5px);
-}
+} */
 
 .member-name {
   font-size: clamp(1rem, 1.5vw + 0.2rem, 1.5rem);
@@ -120,13 +120,17 @@
   padding: 0.75rem 1.25rem;
   border: none;
   color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   background-color: var(--secondary-color);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .member-card button:hover {
-  background-color: #c07c6c;
+  background-color: #bf7262;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
 }
 
 /* Responsive stylings for the team members section */
