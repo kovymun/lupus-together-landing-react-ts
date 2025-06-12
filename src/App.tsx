@@ -4,6 +4,7 @@ import JoinForm from "./components/JoinForm";
 import Members from "./components/Members";
 import Navbar from "./components/Navbar";
 import Stories from "./components/Stories";
+import UnderstandingLupus from "./components/UnderstandingLupus";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <UnderstandingLupus />
         <Stories />
         <Members />
         <JoinForm />
