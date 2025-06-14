@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <Element name="home">
       {" "}
-      <section className="hero" id="hero" style={{ border: "5px solid red" }}>
+      <section className="hero" id="hero">
         <div className="hero-content">
           <h1>Your Story. Your Strength. A Community That Understands</h1>
           <p>
