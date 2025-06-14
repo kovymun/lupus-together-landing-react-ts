@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimesCircle } from "react-icons/fa";
 import "../styles/navbar.css";
 
 const Navbar = () => {
@@ -97,7 +97,7 @@ const Navbar = () => {
 
       {/* Hamburger Menu - visible only on mobile */}
       <button className="navbar-toggle" onClick={handleNavToggle}>
-        <FaBars size={24} />
+        {isMenuOpen ? <FaTimesCircle size={24} /> : <FaBars size={24} />}
       </button>
 
       {isMenuOpen && (
