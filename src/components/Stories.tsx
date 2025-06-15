@@ -16,10 +16,9 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: "1",
-    name: "Emma van Tonder",
+    name: "Anke van Tonder",
     title: "Teacher",
-    avatarUrl:
-      "https://plus.unsplash.com/premium_photo-1671656349218-5218444643d8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8MXwwfHx8MA%3D%3D",
+    avatarUrl: "../src/assets/anke-van-tonder.webp",
     city: "Cape Town",
     country: "South Africa",
     quote:
@@ -30,8 +29,7 @@ const testimonials: Testimonial[] = [
     id: "2",
     name: "Michael Johnson",
     title: "Accountant",
-    avatarUrl:
-      "https://ui-avatars.com/api/?name=Michael+Johnson&background=7b6cf6&color=fff",
+    avatarUrl: "../src/assets/michael-johnson.webp",
     city: "Paarl",
     country: "South Africa",
     quote:
@@ -40,10 +38,9 @@ const testimonials: Testimonial[] = [
   },
   {
     id: "3",
-    name: "Ayesha Patel",
+    name: "Ayesha Hussain",
     title: "Student",
-    avatarUrl:
-      "https://ui-avatars.com/api/?name=Ayesha+Patel&background=7b6cf6&color=fff",
+    avatarUrl: "../src/assets/ayesha-hussain.webp",
     city: "Durban",
     country: "South Africa",
     quote:
@@ -54,8 +51,7 @@ const testimonials: Testimonial[] = [
     id: "4",
     name: "Thabo Mokoena",
     title: "Engineer",
-    avatarUrl:
-      "https://ui-avatars.com/api/?name=Thabo+Mokoena&background=7b6cf6&color=fff",
+    avatarUrl: "../src/assets/thabo-mokoena.webp",
     city: "Pretoria",
     country: "South Africa",
     quote:
@@ -66,8 +62,7 @@ const testimonials: Testimonial[] = [
     id: "5",
     name: "Sophia Kim",
     title: "Nurse",
-    avatarUrl:
-      "https://ui-avatars.com/api/?name=Sophia+Kim&background=7b6cf6&color=fff",
+    avatarUrl: "../src/assets/sophia-kim.webp",
     city: "Boksburg",
     country: "South Africa",
     quote:
@@ -78,8 +73,7 @@ const testimonials: Testimonial[] = [
     id: "6",
     name: "Jane Naidoo",
     title: "Photographer",
-    avatarUrl:
-      "https://ui-avatars.com/api/?name=Jane+Naidoo&background=7b6cf6&color=fff",
+    avatarUrl: "../src/assets/jane-naidoo.webp",
     city: "East London",
     country: "South Africa",
     quote:
