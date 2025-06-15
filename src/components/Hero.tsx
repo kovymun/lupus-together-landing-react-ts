@@ -16,7 +16,7 @@ const Hero = () => {
             spy={true}
             smooth={true}
             duration={600}
-            className="hero-cta"
+            className="site-btn"
           >
             Join Our Community!
           </Link>
