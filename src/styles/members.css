@@ -7,6 +7,7 @@
   --muted-text-color: #777777;
   --primary-font-family: "Quicksand", sans-serif;
   --secondary-font-family: "Playfair Display", Georgia;
+  --btn-hover-color: #bf7262;
 }
 .members-grid {
   display: grid;
@@ -86,7 +87,8 @@
   display: flex;
   justify-content: center;
   gap: 0.75rem;
-  margin-top: 1rem;
+  margin: 1.8rem 0;
+  /* border: 1px solid red; */
 }
 
 .member-socials a {
@@ -111,22 +113,10 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.member-card button {
-  margin-top: 1em;
-  padding: 0.75rem 1.25rem;
-  border: none;
-  color: #ffffff;
-  font-weight: 600;
+.member-card-btn {
+  font-size: clamp(0.7rem, 0.5vw + 0.6rem, 0.8rem);
+  border-radius: 0%;
   letter-spacing: 0.06em;
-  background-color: var(--secondary-color);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.member-card button:hover {
-  background-color: #bf7262;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  transform: scale(1.02);
 }
 
 /* Responsive stylings for the team members section */

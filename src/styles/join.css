@@ -9,6 +9,7 @@
   --form-background-color: #faf7f5;
   --primary-font-family: "Quicksand", sans-serif;
   --secondary-font-family: "Playfair Display", Georgia;
+  --btn-hover-color: #bf7262;
 }
 
 .join-section {
@@ -82,19 +83,9 @@
   color: var(--text-color);
 }
 
-.join-form button {
-  background-color: var(--secondary-color);
-  color: #ffffff;
+.join-form-btn {
   padding: 1rem 1.8rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.join-form button:hover {
-  background-color: #c07c6c;
+  letter-spacing: 0.06em;
 }
 
 /* Responsive stylings for the form + from section */
@@ -114,7 +105,7 @@
     width: 100%;
   }
 
-  .join-form button {
+  .join-form-btn {
     width: 100%;
     text-align: center;
   }

@@ -46,7 +46,9 @@ const JoinForm = () => {
                 </label>
               </div>
 
-              <button type="submit">Join the Community</button>
+              <button type="submit" className="site-btn join-form-btn">
+                Join the Community
+              </button>
             </form>
           </div>
         </div>

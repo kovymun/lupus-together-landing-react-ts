@@ -158,7 +158,7 @@ const Members = () => {
                       )}
 
                       <button
-                        className="toggle-button"
+                        className="site-btn member-card-btn"
                         onClick={() => toggleText(id)}
                       >
                         {isExpanded ? "Show Less" : "Show More"}
