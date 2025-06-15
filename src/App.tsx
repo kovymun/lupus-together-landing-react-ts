@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import JoinForm from "./components/JoinForm";
 import Members from "./components/Members";
@@ -17,6 +18,7 @@ function App() {
         <Stories />
         <Members />
         <JoinForm />
+        <Footer />
       </main>
     </>
   );
