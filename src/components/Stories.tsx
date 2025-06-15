@@ -22,8 +22,8 @@ const testimonials: Testimonial[] = [
     city: "Cape Town",
     country: "South Africa",
     quote:
-      "I used to feel so alone until I joined Lupus Together. Knowing there are others who truly understand changed everything. The support group helped me find strength and hope again.",
-    datePosted: "March 2024",
+      "I felt alone - until Lupus Together. Now I'm seen, supported, and surrounded by people who truly understand.",
+    datePosted: "12 March 2024",
   },
   {
     id: "2",
@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
     country: "South Africa",
     quote:
       "What stood out was the community. People genuinely care. Weekly check-ins made a real difference in my mental health.",
-    datePosted: "February 2024",
+    datePosted: "14 February 2024",
   },
   {
     id: "3",
@@ -45,7 +45,7 @@ const testimonials: Testimonial[] = [
     country: "South Africa",
     quote:
       "Lupus Together has been a lifeline. I was scared after my diagnosis, but their warm welcome made me feel seen and supported.",
-    datePosted: "January 2024",
+    datePosted: "16 January 2024",
   },
   {
     id: "4",
@@ -55,8 +55,8 @@ const testimonials: Testimonial[] = [
     city: "Pretoria",
     country: "South Africa",
     quote:
-      "I joined to support my sister, and I stayed for the purpose. The stories, the outreach—it’s truly empowering.",
-    datePosted: "April 2024",
+      "I joined to support my sister, and I stayed for the purpose. The stories, the outreach, it's truly empowering.",
+    datePosted: "24 April 2024",
   },
   {
     id: "5",
@@ -66,8 +66,8 @@ const testimonials: Testimonial[] = [
     city: "Boksburg",
     country: "South Africa",
     quote:
-      "Professionally and personally, I see the value Lupus Together brings. Their focus on mental well-being is rare and needed.",
-    datePosted: "May 2024",
+      "Professionally and personally, I see the value Lupus Together brings. Their focus on mental well being is rare and needed.",
+    datePosted: "19 May 2024",
   },
   {
     id: "6",
@@ -78,7 +78,7 @@ const testimonials: Testimonial[] = [
     country: "South Africa",
     quote:
       "Living with Lupus in silence is hard. This group gave me a voice, and more importantly, people who listen without judgment.",
-    datePosted: "December 2023",
+    datePosted: "16 December 2023",
   },
 ];
 
@@ -100,7 +100,16 @@ const Stories = () => {
           </div>
           <div className="story-content">
             {testimonials.map(
-              ({ id, name, avatarUrl, title, city, country, quote }) => (
+              ({
+                id,
+                name,
+                avatarUrl,
+                title,
+                city,
+                country,
+                quote,
+                datePosted,
+              }) => (
                 <article key={id} className="story-card">
                   <div className="avatar">
                     <img src={avatarUrl} alt="Profile-Photo" loading="lazy" />
@@ -118,6 +127,7 @@ const Stories = () => {
                     />
                     {quote}
                   </blockquote>
+                  <p className="date-posted">- {datePosted}</p>
                 </article>
               )
             )}

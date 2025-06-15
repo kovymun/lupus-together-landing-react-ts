@@ -1,7 +1,6 @@
 :root {
   --primary-color: #7b6cf6;
   --secondary-color: #d69585;
-  --accent-color: #ff8c42;
   --text-color: #333333;
   --muted-text-color: #777777;
   --primary-font-family: "Quicksand", sans-serif;
@@ -12,12 +11,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
 }
 
 .story-card {
   padding: 1.25rem;
   border-radius: 0.75rem;
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   background: #fff;
   border-top: 3px solid var(--primary-color);
@@ -30,11 +31,13 @@
 }
 
 .story-card img {
-  width: 100px;
-  height: 100px;
+  width: clamp(60px, 10vw, 100px);
+  height: clamp(60px, 10vw, 100px);
   flex-shrink: 0;
   border-radius: 50%;
   object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .avatar-title {
@@ -47,12 +50,12 @@
 .avatar-title span:first-child {
   font-size: clamp(1rem, 1.2vw + 0.5rem, 1.25rem);
   font-weight: 600;
-  color: #111;
+  color: var(--text-color);
 }
 
 .avatar-title span:last-child {
-  /* font-size: 0.875rem; */
   font-size: clamp(0.75rem, 0.9vw + 0.4rem, 1rem);
+  /* color: var(--muted-text-color); */
   color: #666;
 }
 
@@ -60,4 +63,12 @@
   margin-top: 2em;
   font-size: 1rem;
   font-style: italic;
+}
+
+.date-posted {
+  margin-top: 2rem;
+  text-align: left;
+  font-size: clamp(0.75rem, 0.9vw + 0.4rem, 1rem);
+  font-style: italic;
+  color: var(--muted-text-color);
 }
