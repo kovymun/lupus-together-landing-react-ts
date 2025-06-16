@@ -15,42 +15,40 @@ const JoinForm = () => {
               connect with others, and be inspired.
             </p>
           </div>
-          <div className="container">
-            <form className="join-form">
-              <div className="input-container">
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" required />
-              </div>
+          <form className="join-form">
+            <div className="input-container full-width">
+              <label htmlFor="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
 
-              <div className="input-container">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
+            <div className="input-container">
+              <label htmlFor="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
 
-              <div className="input-container">
-                {" "}
-                <label htmlFor="phone">Phone Number (optional)</label>
-                <input type="tel" id="phone" name="phone" />
-              </div>
+            <div className="input-container">
+              {" "}
+              <label htmlFor="phone">Phone Number (optional)</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
 
-              <div className="input-container">
-                {" "}
-                <label htmlFor="message">Tell us more</label>
-                <textarea id="message" name="message" rows={5} required />
-              </div>
+            <div className="input-container">
+              {" "}
+              <label htmlFor="message">Tell us more</label>
+              <textarea id="message" name="message" rows={5} required />
+            </div>
 
-              <div className="consent">
-                <input type="checkbox" id="consent" required />
-                <label htmlFor="consent">
-                  I agree to be contacted by Lupus Together.
-                </label>
-              </div>
+            <div className="consent full-width">
+              <input type="checkbox" id="consent" required />
+              <label htmlFor="consent">
+                I agree to be contacted by Lupus Together.
+              </label>
+            </div>
 
-              <button type="submit" className="site-btn join-form-btn">
-                Join the Community
-              </button>
-            </form>
-          </div>
+            <button type="submit" className="site-btn join-form-btn full-width">
+              Join the Community
+            </button>
+          </form>
         </div>
       </section>
     </Element>
