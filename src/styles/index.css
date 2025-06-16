@@ -1,7 +1,6 @@
 :root {
   --primary-color: #7b6cf6;
   --secondary-color: #d69585;
-  /* --background-color: #faf7f5; */
   --background-color: #faf8fc;
   --btn-hover-color: #bf7262;
   --text-color: #333333;
@@ -91,19 +90,6 @@ section:not(#hero) {
   letter-spacing: 0.05em;
 }
 
-/* .hero-cta {
-  padding: 0.75rem 1.25rem;
-  font-size: clamp(0.9rem, 0.6vw + 0.5rem, 1rem);
-  background-color: var(--secondary-color);
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 300ms ease, transform 300ms ease;
-} */
-
 .site-btn {
   padding: 0.75rem 1.25rem;
   font-size: clamp(0.9rem, 0.6vw + 0.5rem, 1rem);
@@ -122,12 +108,6 @@ section:not(#hero) {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transform: scale(1.02);
 }
-
-/* .hero-cta:hover {
-  background-color: #bf7262;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  transform: scale(1.02);
-} */
 
 .hero-image {
   flex: 1;
