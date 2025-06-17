@@ -15,7 +15,8 @@ const Hero = () => {
             to="join"
             spy={true}
             smooth={true}
-            duration={600}
+            offset={-80}
+            duration={900}
             className="site-btn"
           >
             Join Our Community!
