@@ -10,8 +10,6 @@ const Navbar = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
-  console.log(isMenuOpen);
-
   const handleLinkSelect = (): void => {
     setIsMenuOpen(false);
   };

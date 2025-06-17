@@ -28,9 +28,6 @@ const Members = () => {
     [key: number]: boolean;
   }>({});
 
-  console.log(members);
-  console.log("is open?", expandedCards);
-
   useEffect(() => {
     const fetchMembers = async () => {
       const { data, error } = await supabase
@@ -41,7 +38,6 @@ const Members = () => {
         console.error("Error fetching members:", error);
       } else {
         setMembers(data || []);
-        console.log("DB:", data);
       }
     };
 
