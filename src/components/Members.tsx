@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FaQuoteLeft } from "react-icons/fa";
 import { supabase } from "../lib/supabaseClient";
 import { Element } from "react-scroll";
 import {
@@ -110,7 +111,16 @@ const Members = () => {
                       <p className="member-bio">{bio}</p>
                       {isExpanded && (
                         <div>
-                          <p className="member-message">{message}</p>
+                          <blockquote className="member-message">
+                            <FaQuoteLeft
+                              style={{
+                                marginRight: "8px",
+                                color: "var(--primary-color)",
+                              }}
+                            />
+                            {message}
+                          </blockquote>
+
                           <div className="member-contact">
                             <div className="member-email">
                               <strong>Email:</strong>{" "}
