@@ -22,7 +22,7 @@ const testimonials: Testimonial[] = [
     city: "Cape Town",
     country: "South Africa",
     quote:
-      "I felt alone - until Lupus Together. Now I'm seen, supported, and surrounded by people who truly understand.",
+      "I felt invisible until I found Lupus Together. This support group helped me feel understood, valued, and no longer completely alone.",
     datePosted: "12 March 2024",
   },
   {
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     city: "Paarl",
     country: "South Africa",
     quote:
-      "What stood out was the community. People genuinely care. Weekly check-ins made a real difference in my mental health.",
+      "The community at Lupus Together genuinely cares. Weekly check ins and shared stories gave me strength and purpose again. It's life changing support.",
     datePosted: "14 February 2024",
   },
   {
@@ -44,7 +44,7 @@ const testimonials: Testimonial[] = [
     city: "Durban",
     country: "South Africa",
     quote:
-      "Lupus Together has been a lifeline. I was scared after my diagnosis, but their warm welcome made me feel seen and supported.",
+      "Lupus Together has been a lifeline. After diagnosis, I felt lost, until this group welcomed me and gave me support, guidance, and hope again.",
     datePosted: "16 January 2024",
   },
   {
@@ -55,7 +55,7 @@ const testimonials: Testimonial[] = [
     city: "Pretoria",
     country: "South Africa",
     quote:
-      "I joined to support my sister, and I stayed for the purpose. The stories, the outreach, it's truly empowering.",
+      "I joined for my sister. I stayed for the strength. This group's outreach inspires me daily with purpose, love, and real connection.",
     datePosted: "24 April 2024",
   },
   {
@@ -66,7 +66,7 @@ const testimonials: Testimonial[] = [
     city: "Boksburg",
     country: "South Africa",
     quote:
-      "Professionally and personally, I see the value Lupus Together brings. Their focus on mental well being is rare and needed.",
+      "Lupus Together changed everything. As a nurse, I appreciate their mental health focus. As a patient, I found care, empathy, and belonging.",
     datePosted: "19 May 2024",
   },
   {
@@ -77,7 +77,7 @@ const testimonials: Testimonial[] = [
     city: "East London",
     country: "South Africa",
     quote:
-      "Living with Lupus in silence is hard. This group gave me a voice, and more importantly, people who listen without judgment.",
+      "Living with Lupus in silence nearly broke me. This support group helped me feel seen, heard, accepted, and loved. I found strength, community, and hope.",
     datePosted: "16 December 2023",
   },
 ];
