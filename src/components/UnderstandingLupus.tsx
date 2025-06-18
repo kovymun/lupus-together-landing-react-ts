@@ -4,7 +4,7 @@ import "../styles/lupus.css";
 const UnderstandingLupus = () => {
   return (
     <Element name="lupus">
-      <section className="members-section">
+      <section className="understanding-lupus-section">
         <div className="section-wrapper">
           <div className="section-header">
             <h2 className="section-title">Understanding Lupus</h2>
