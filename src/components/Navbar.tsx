@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimesCircle } from "react-icons/fa";
 import "../styles/navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const navRef = useRef<HTMLElement | null>(null);
+  const isScrolledRef = useRef(false);
 
   const handleNavToggle = (): void => {
     setIsMenuOpen((prev) => !prev);
@@ -14,8 +16,30 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  // Using useRef to avoid re-renders on scroll. More performant than useState for tracking scroll-based UI changes.
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 0;
+
+      if (navRef.current && scrolled !== isScrolledRef.current) {
+        isScrolledRef.current = scrolled;
+
+        if (scrolled) {
+          navRef.current.classList.add("navbar-scrolled");
+        } else {
+          navRef.current.classList.remove("navbar-scrolled");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className="navbar" ref={navRef}>
       <Link to="home" spy={true} smooth={true} offset={-80} duration={500}>
         <div className="navbar-brand">Lupus Together</div>
       </Link>

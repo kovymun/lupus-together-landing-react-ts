@@ -20,6 +20,10 @@
   z-index: 5;
 }
 
+.navbar-scrolled {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .navbar-brand {
   font-weight: bold;
   font-size: 1.2rem;
