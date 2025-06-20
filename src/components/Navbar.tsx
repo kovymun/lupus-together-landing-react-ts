@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-scroll";
-import { FaBars, FaTimesCircle } from "react-icons/fa";
+import { FaBars, FaTimesCircle, FaHeart } from "react-icons/fa";
 import "../styles/navbar.css";
 
 const Navbar = () => {
@@ -40,8 +40,16 @@ const Navbar = () => {
 
   return (
     <nav className="navbar" ref={navRef}>
-      <Link to="home" spy={true} smooth={true} offset={-80} duration={500}>
-        <div className="navbar-brand">Lupus Together</div>
+      <Link
+        to="home"
+        spy={true}
+        smooth={true}
+        offset={-80}
+        duration={500}
+        className="brand-logo"
+      >
+        <FaHeart size={20} />
+        <span className="navbar-brand">Lupus Together</span>
       </Link>
 
       <ul className={`navbar-links ${isMenuOpen ? "mobile-nav-active" : ""}`}>
@@ -50,7 +58,7 @@ const Navbar = () => {
             to="about"
             spy={true}
             smooth={true}
-            offset={-80}
+            offset={-90}
             duration={500}
             activeClass="active"
             onClick={handleLinkSelect}
@@ -63,7 +71,7 @@ const Navbar = () => {
             to="lupus"
             spy={true}
             smooth={true}
-            offset={-80}
+            offset={-90}
             duration={500}
             activeClass="active"
             onClick={handleLinkSelect}
@@ -76,7 +84,7 @@ const Navbar = () => {
             to="stories"
             spy={true}
             smooth={true}
-            offset={-80}
+            offset={-90}
             duration={500}
             activeClass="active"
             onClick={handleLinkSelect}
@@ -89,7 +97,7 @@ const Navbar = () => {
             to="members"
             spy={true}
             smooth={true}
-            offset={-80}
+            offset={-90}
             duration={500}
             activeClass="active"
             onClick={handleLinkSelect}
@@ -102,7 +110,7 @@ const Navbar = () => {
             to="join"
             spy={true}
             smooth={true}
-            offset={-80}
+            offset={-90}
             duration={500}
             activeClass="active"
             onClick={handleLinkSelect}

@@ -5,6 +5,7 @@ import {
   FaThreads,
   FaYoutube,
   FaXTwitter,
+  FaHeart,
 } from "react-icons/fa6";
 import "../styles/footer.css";
 
@@ -14,7 +15,12 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <h2 className="footer-logo">Lupus Together</h2>
+          <h2 className="footer-logo">
+            <span>
+              <FaHeart size={20} />
+            </span>
+            Lupus Together
+          </h2>
           <p className="footer-tagline">Finding strength together.</p>
         </div>
 
