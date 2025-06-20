@@ -30,6 +30,15 @@
   color: var(--primary-color);
 }
 
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .navbar-links {
   list-style: none;
   display: flex;
