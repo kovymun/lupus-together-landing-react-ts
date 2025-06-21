@@ -1,5 +1,9 @@
 import { Element } from "react-scroll";
+import { FaQuoteLeft } from "react-icons/fa";
 import "../styles/about.css";
+
+import hands from "../assets/safe-hands.webp";
+import community from "../assets/community.webp";
 
 const About = () => {
   return (
@@ -8,20 +12,17 @@ const About = () => {
         <div className="section-wrapper">
           <div className="section-header">
             <h2 className="section-title">About Lupus Together</h2>
-            <p
-              className="about-subtitle"
-              style={{ color: "red", textAlign: "center" }}
-            >
+            <p className="about-subtitle" id="about-subtitle">
               You're not alone. We're in this together
             </p>
           </div>
 
-          <div className="about-content" style={{ border: "1px solid red" }}>
+          <div className="about-content">
             <div className="text-image-row">
               <img
-                src="https://images.unsplash.com/photo-1583160247711-2191776b4b91?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHB1cHBpZXN8ZW58MHx8MHx8fDA%3D"
+                src={hands}
                 alt="Supportive hands symbolizing care and connection"
-                className="float-image"
+                className="float-image img-one"
                 loading="lazy"
               />
               <p>
@@ -34,9 +35,9 @@ const About = () => {
 
             <div className="text-image-row reverse-row">
               <img
-                src="https://images.unsplash.com/photo-1583160247711-2191776b4b91?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHB1cHBpZXN8ZW58MHx8MHx8fDA%3D"
+                src={community}
                 alt="Group of friends providing support"
-                className="float-image"
+                className="float-image img-two"
                 loading="lazy"
               />
               <p>
@@ -48,7 +49,7 @@ const About = () => {
               </p>
             </div>
 
-            <p>
+            <p id="mission-statement">
               Lupus Together was created so no one has to face this condition in
               silence.
             </p>
@@ -91,9 +92,15 @@ const About = () => {
             </ul>
 
             <blockquote className="about-quote">
+              <FaQuoteLeft
+                style={{
+                  marginRight: "8px",
+                  color: "var(--primary-color)",
+                }}
+              />
               For once, I did not have to explain everything. They just
               understood
-              <span className="quote-author">- Community Member</span>
+              <span className="community-author">- Community Member</span>
             </blockquote>
           </div>
         </div>

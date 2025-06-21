@@ -1,4 +1,5 @@
 import { Element, Link } from "react-scroll";
+import holdingHands from "../assets/holding-hands.webp";
 
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
         </div>
         <div className="hero-image">
           <img
-            src="../src/assets/holding-hands.webp"
+            src={holdingHands}
             alt="People holding hands, symbolizing community and empathy for people with Lupus"
           />
         </div>
