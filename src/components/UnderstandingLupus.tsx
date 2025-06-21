@@ -15,7 +15,7 @@ const UnderstandingLupus = () => {
               navigating this journey.
             </p>
           </div>
-          <div className="lupus-content">
+          <div className="lupus-content" style={{ outline: "1px solid red" }}>
             <p className="lupus-text">
               Lupus occurs when your immune system attacks your body’s own
               tissues and organs. Inflammation caused by lupus can affect the
