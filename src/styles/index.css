@@ -59,6 +59,9 @@ section:not(#hero) {
   text-align: justify;
 }
 
+a {
+  cursor: pointer;
+}
 /* Hero Section */
 
 .hero {
