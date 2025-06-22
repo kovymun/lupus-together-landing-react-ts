@@ -25,6 +25,7 @@ const Footer = () => {
         </div>
 
         <nav className="footer-nav">
+          <h3>Explore</h3>
           <ul className="footer-nav-list">
             <li>
               <Link
@@ -41,7 +42,10 @@ const Footer = () => {
               <a href="/#">FAQ</a>
             </li>
             <li>
-              <a href="/#">Resources</a>
+              <a href="/#">Lupus Library</a>
+            </li>
+            <li>
+              <a href="/#">Private Forum</a>
             </li>
           </ul>
         </nav>
@@ -54,7 +58,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="footer-social">
+        <nav className="footer-social" aria-label="Social links">
           <h3>Follow</h3>
           <div className="footer-social-icons">
             <a href="/#" aria-label="Facebook" title="Facebook">
@@ -73,7 +77,7 @@ const Footer = () => {
               <FaThreads />
             </a>
           </div>
-        </div>
+        </nav>
       </div>
       <div className="footer-bottom">
         <p className="footer-legal">
