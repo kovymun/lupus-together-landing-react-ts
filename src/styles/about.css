@@ -24,7 +24,7 @@
   text-align: justify;
 }
 
-#mission-statement {
+/* #mission-statement {
   text-align: center;
   font-size: clamp(1.25rem, 3vw, 1.8rem);
   font-weight: 500;
@@ -34,7 +34,7 @@
   max-width: 700px;
   line-height: 1.6;
   letter-spacing: 0.3px;
-}
+} */
 
 .about-subheading {
   font-size: clamp(1.25rem, 3vw, 1.5rem);
