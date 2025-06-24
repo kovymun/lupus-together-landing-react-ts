@@ -1,6 +1,9 @@
 import { Element } from "react-scroll";
 import "../styles/lupus.css";
 
+import hands from "../assets/safe-hands.webp";
+import community from "../assets/community.webp";
+
 const UnderstandingLupus = () => {
   return (
     <Element name="lupus">
@@ -15,21 +18,40 @@ const UnderstandingLupus = () => {
               navigating this journey.
             </p>
           </div>
+
           <div className="lupus-content">
-            <p className="lupus-text">
-              Lupus occurs when your immune system attacks your body’s own
-              tissues and organs. Inflammation caused by lupus can affect the
-              joints, skin, kidneys, blood cells, brain, heart, and lungs.
-            </p>
-            <p className="lupus-text">
-              According to the Lupus Foundation of America, an estimated 5
-              million people globally live with lupus. It affects approximately
-              1 in 1,000 people in South Africa, though it may be
-              underdiagnosed. While lupus can affect anyone, 90% of diagnosed
-              cases are women, and it’s more common among people of African,
-              Asian, Hispanic, and Indigenous descent.
-            </p>
-            <p className="lupus-text">
+            <div className="text-image-row reverse-row">
+              <img
+                src={hands}
+                alt="Supportive hands symbolizing care and connection"
+                className="float-image img-one"
+                loading="lazy"
+              />
+              <p className="lupus-text">
+                Lupus occurs when your immune system attacks your body's own
+                tissues and organs. Inflammation caused by lupus can affect the
+                joints, skin, kidneys, blood cells, brain, heart, and lungs.
+              </p>
+            </div>
+            <div className="text-image-row">
+              <img
+                src={community}
+                alt="Group of friends providing support"
+                className="float-image img-two"
+                loading="lazy"
+              />
+              <p className="lupus-text">
+                According to the Lupus Foundation of America, an estimated 5
+                million people around the world are living with lupus. In South
+                Africa, it's believed to affect about 1 in every 1000 people,
+                though many cases may go undiagnosed. While lupus is more common
+                among women, it can affect anyone. That's why our mission is to
+                offer support, understanding, and connection to everyone
+                navigating this journey.
+              </p>
+            </div>
+
+            <p className="mission-statement">
               While there is currently no cure, with early diagnosis and proper
               medical care, many people with lupus can live a full and
               meaningful life.

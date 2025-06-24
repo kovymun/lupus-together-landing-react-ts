@@ -49,7 +49,7 @@ const About = () => {
               </p>
             </div>
 
-            <p id="mission-statement">
+            <p id="mission-statement" className="mission-statement">
               Lupus Together was created so no one has to face this condition in
               silence.
             </p>
