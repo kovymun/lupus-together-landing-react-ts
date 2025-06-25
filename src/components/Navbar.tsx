@@ -45,7 +45,7 @@ const Navbar = () => {
         spy={true}
         smooth={true}
         offset={-80}
-        duration={500}
+        duration={700}
         className="brand-logo"
       >
         <FaHeart size={20} />
@@ -59,7 +59,7 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             offset={-90}
-            duration={500}
+            duration={700}
             activeClass="active"
             onClick={handleLinkSelect}
           >
@@ -72,7 +72,7 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             offset={-90}
-            duration={500}
+            duration={700}
             activeClass="active"
             onClick={handleLinkSelect}
           >
@@ -85,7 +85,7 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             offset={-90}
-            duration={500}
+            duration={700}
             activeClass="active"
             onClick={handleLinkSelect}
           >
@@ -98,7 +98,7 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             offset={-90}
-            duration={500}
+            duration={700}
             activeClass="active"
             onClick={handleLinkSelect}
           >
@@ -111,7 +111,7 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             offset={-90}
-            duration={500}
+            duration={700}
             activeClass="active"
             onClick={handleLinkSelect}
           >
