@@ -42,7 +42,7 @@ const Footer = () => {
                 spy={true}
                 smooth={true}
                 offset={-80}
-                duration={500}
+                duration={900}
               >
                 About
               </Link>
