@@ -15,12 +15,21 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <h2 className="footer-logo">
-            <span>
-              <FaHeart size={20} />
-            </span>
-            Lupus Together
-          </h2>
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={900}
+            className="home-route"
+          >
+            <h2 className="footer-logo">
+              <span>
+                <FaHeart size={20} />
+              </span>
+              Lupus Together
+            </h2>
+          </Link>
+
           <p className="footer-tagline">Finding strength together.</p>
         </div>
 
