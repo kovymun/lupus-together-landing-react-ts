@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-.about-content p {
+.about-content p:not(.mission-statement) {
   font-size: clamp(1rem, 2.5vw, 1.125rem);
   line-height: 1.7;
   margin-bottom: 1.5rem;

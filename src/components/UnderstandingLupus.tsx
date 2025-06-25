@@ -1,8 +1,8 @@
 import { Element } from "react-scroll";
 import "../styles/lupus.css";
 
-import hands from "../assets/safe-hands.webp";
-import community from "../assets/community.webp";
+import ribbon from "../assets/ribbon.webp";
+import doctor from "../assets/doctor.webp";
 
 const UnderstandingLupus = () => {
   return (
@@ -22,7 +22,7 @@ const UnderstandingLupus = () => {
           <div className="lupus-content">
             <div className="text-image-row reverse-row">
               <img
-                src={hands}
+                src={doctor}
                 alt="Supportive hands symbolizing care and connection"
                 className="float-image img-one"
                 loading="lazy"
@@ -35,7 +35,7 @@ const UnderstandingLupus = () => {
             </div>
             <div className="text-image-row">
               <img
-                src={community}
+                src={ribbon}
                 alt="Group of friends providing support"
                 className="float-image img-two"
                 loading="lazy"
