@@ -53,7 +53,7 @@ const Members = () => {
 
   return (
     <Element name="members">
-      <section className="members-section">
+      <section className="members-section" role="region">
         <div className="section-wrapper">
           <div className="section-header">
             <h2 className="section-title">
@@ -132,6 +132,7 @@ const Members = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                               aria-label="Facebook"
+                              title="Facebook"
                             >
                               <FaFacebookF />
                             </a>
@@ -140,6 +141,7 @@ const Members = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                               aria-label="Instagram"
+                              title="Instagram"
                             >
                               <FaInstagram />
                             </a>
@@ -148,6 +150,7 @@ const Members = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                               aria-label="Twitter"
+                              title="X / Twitter"
                             >
                               <FaTwitter />
                             </a>
@@ -156,6 +159,7 @@ const Members = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                               aria-label="Threads"
+                              title="Threads"
                             >
                               <FaThreads />
                             </a>
@@ -166,6 +170,8 @@ const Members = () => {
                       <button
                         className="site-btn member-card-btn"
                         onClick={() => toggleText(id)}
+                        aria-expanded={isExpanded}
+                        aria-controls={`details-${id}`}
                       >
                         {isExpanded ? "Show Less" : "Show More"}
                       </button>

@@ -49,7 +49,7 @@ section:not(#hero) {
 .section-title {
   font-family: var(--secondary-font-family);
   font-size: clamp(1.5rem, 5vw, 2.5rem); /* Fluid-typography */
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-weight: bold;
 }
 
