@@ -12,7 +12,7 @@ const About = () => {
         <div className="section-wrapper">
           <div className="section-header">
             <h2 className="section-title">About Lupus Together</h2>
-            <p className="about-subtitle" id="about-subtitle">
+            <p id="about-subtitle" className="about-subtitle">
               You're not alone. We're in this together
             </p>
           </div>
