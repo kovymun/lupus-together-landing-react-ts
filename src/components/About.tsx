@@ -8,7 +8,7 @@ import community from "../assets/community.webp";
 const About = () => {
   return (
     <Element name="about">
-      <section className="about-section">
+      <section className="about-section" aria-label="About Lupus Together">
         <div className="section-wrapper">
           <div className="section-header">
             <h2 className="section-title">About Lupus Together</h2>
@@ -58,40 +58,46 @@ const About = () => {
               What you'll find in our community
             </h3>
 
-            <ul className="about-list">
+            <ul
+              className="about-list"
+              aria-label="Lupus Together Community Services"
+            >
               <li>
-                <span role="img" aria-label="flower">
+                <span role="img" aria-label="Flower Icon">
                   🌼
                 </span>{" "}
                 Circle Chats - weekly check-ins guided by lived experience
               </li>
               <li>
-                <span role="img" aria-label="handshake">
+                <span role="img" aria-label="Handshake Icon">
                   🤝
                 </span>{" "}
                 Buddy Bench - match with someone who understands
               </li>
               <li>
-                <span role="img" aria-label="books">
+                <span role="img" aria-label="Books Icon">
                   📚
                 </span>{" "}
                 Lupus Library - helpful stories and bite-sized support guides
               </li>
               <li>
-                <span role="img" aria-label="microphone">
+                <span role="img" aria-label="Microphone Icon">
                   🎙️
                 </span>{" "}
                 Lupus Talks - real conversations from people walking this path
               </li>
               <li>
-                <span role="img" aria-label="speech bubble">
+                <span role="img" aria-label="Speech Bubble Icon">
                   💬
                 </span>{" "}
                 Private Forum - a safe space to share, ask, and connect
               </li>
             </ul>
 
-            <blockquote className="about-quote">
+            <blockquote
+              className="about-quote"
+              aria-label="Community Testimonial Quote"
+            >
               <FaQuoteLeft
                 style={{
                   marginRight: "8px",
