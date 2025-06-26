@@ -63,7 +63,11 @@ const Stories = () => {
               }) => (
                 <article key={id} className="story-card">
                   <div className="avatar">
-                    <img src={avatar} alt="Profile-Photo" loading="lazy" />
+                    <img
+                      src={avatar}
+                      alt={`Profile Image of ${name}`}
+                      loading="lazy"
+                    />
                     <div className="avatar-title">
                       <span>{name}</span>
                       <span>{`${title} · ${city}, ${country}`}</span>
