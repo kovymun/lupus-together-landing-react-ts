@@ -19,42 +19,43 @@ const UnderstandingLupus = () => {
             </p>
           </div>
 
-          <div className="lupus-content">
-            <div className="text-image-row reverse-row">
+          <div className="lupus-content content">
+            <div className="text-image-row">
               <img
-                src={doctor}
+                src={ribbon}
                 alt="Supportive hands symbolizing care and connection"
                 className="float-image img-one"
                 loading="lazy"
               />
               <p className="lupus-text">
-                Lupus occurs when your immune system attacks your body's own
-                tissues and organs. Inflammation caused by lupus can affect the
-                joints, skin, kidneys, blood cells, brain, heart, and lungs.
+                Lupus is an autoimmune condition where the immune system,
+                instead of protecting the body, mistakenly reacts against
+                healthy tissues. This may cause inflammation in areas like the
+                skin and joints. Every lupus journey is unique, but support and
+                understanding make all the difference.
               </p>
             </div>
-            <div className="text-image-row">
+            <div className="text-image-row reverse-row">
               <img
-                src={ribbon}
+                src={doctor}
                 alt="Group of friends providing support"
                 className="float-image img-two"
                 loading="lazy"
               />
               <p className="lupus-text">
                 According to the Lupus Foundation of America, an estimated 5
-                million people around the world are living with lupus. In South
-                Africa, it's believed to affect about 1 in every 1000 people,
-                though many cases may go undiagnosed. While lupus is more common
-                among women, it can affect anyone. That's why our mission is to
-                offer support, understanding, and connection to everyone
-                navigating this journey.
+                million people worldwide are living with lupus. In South Africa,
+                it's believed to affect about 1 in every 1000 people, and many
+                cases may go undiagnosed. Lupus is more common in women, but it
+                can affect anyone. That's why our mission is to offer support,
+                understanding, and connection to everyone navigating this
+                journey.
               </p>
             </div>
-
             <p className="mission-statement">
-              While there is currently no cure, with early diagnosis and proper
-              medical care, many people with lupus can live a full and
-              meaningful life.
+              Living with lupus can be difficult, but with early diagnosis,
+              proper care, and strong support, many go on to live full,
+              meaningful, empowered lives.
             </p>
           </div>
         </div>

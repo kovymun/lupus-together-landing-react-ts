@@ -8,11 +8,6 @@
   --secondary-font-family: "Playfair Display", Georgia;
 }
 
-.about-content {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
 #about-subtitle {
   text-align: center;
 }
@@ -24,25 +19,13 @@
   text-align: justify;
 }
 
-/* #mission-statement {
-  text-align: center;
-  font-size: clamp(1.25rem, 3vw, 1.8rem);
-  font-weight: 500;
-  font-style: italic;
-  color: var(--primary-color);
-  margin: 3rem auto;
-  max-width: 700px;
-  line-height: 1.6;
-  letter-spacing: 0.3px;
-} */
-
-.about-subheading {
+/* .about-subheading {
   font-size: clamp(1.25rem, 3vw, 1.5rem);
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-weight: 600;
   color: var(--primary-color);
-}
+} */
 
 .about-list {
   list-style: none;

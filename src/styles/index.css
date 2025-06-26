@@ -63,9 +63,14 @@ a {
   cursor: pointer;
 }
 
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .mission-statement {
   text-align: center;
-  font-size: clamp(1.25rem, 3vw, 1.8rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
   font-weight: 500;
   font-style: italic;
   color: var(--primary-color);
