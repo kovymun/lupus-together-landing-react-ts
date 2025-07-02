@@ -9,3 +9,14 @@ export interface Member {
   profileImg: string;
   alt: string;
 }
+
+export interface Testimonial {
+  id: number;
+  name: string;
+  title: string;
+  avatar: string;
+  city: string;
+  country: string;
+  quote: string;
+  datePosted: string;
+}
