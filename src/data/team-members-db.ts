@@ -1,4 +1,4 @@
-import type { Member } from "../types/members";
+import type { Member } from "../types/lupus-together-types";
 import tammi from "../assets/team-members/tammi-jacobs-quinn.webp";
 import emma from "../assets/team-members/emma-van-der-merwe.webp";
 import jessica from "../assets/team-members/jessica-pretorius.webp";

@@ -1,39 +1,9 @@
-import { useState, useEffect } from "react";
-import { supabase } from "../lib/supabaseClient";
 import { Element } from "react-scroll";
 import { FaQuoteLeft } from "react-icons/fa";
+import { testimonials } from "../data/testimonial-db";
 import "../styles/stories.css";
 
-interface Testimonial {
-  id: number;
-  name: string;
-  title: string;
-  avatar: string;
-  city: string;
-  country: string;
-  quote: string;
-  date_posted: string;
-}
-
 const Stories = () => {
-  const [stories, setStories] = useState<Testimonial[]>([]);
-
-  useEffect(() => {
-    const fetchStories = async () => {
-      const { data, error } = await supabase
-        .from("testimonials")
-        .select("*")
-        .order("id", { ascending: true });
-      if (error) {
-        console.error("Error fetching testimonials:", error);
-      } else {
-        setStories(data || []);
-      }
-    };
-
-    fetchStories();
-  }, []);
-
   return (
     <Element name="stories">
       <section className="stories-section">
@@ -50,7 +20,7 @@ const Stories = () => {
             </p>
           </div>
           <div className="story-content">
-            {stories.map(
+            {testimonials.map(
               ({
                 id,
                 name,
@@ -59,7 +29,7 @@ const Stories = () => {
                 city,
                 country,
                 quote,
-                date_posted,
+                datePosted,
               }) => (
                 <article key={id} className="story-card">
                   <div className="avatar">
@@ -82,7 +52,7 @@ const Stories = () => {
                     />
                     {quote}
                   </blockquote>
-                  <p className="date-posted">- {date_posted}</p>
+                  <p className="date-posted">- {datePosted}</p>
                 </article>
               )
             )}
