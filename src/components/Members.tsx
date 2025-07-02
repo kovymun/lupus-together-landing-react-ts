@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaQuoteLeft } from "react-icons/fa";
-import { supabase } from "../lib/supabaseClient";
+import { members } from "../data/team-members-db";
 import { Element } from "react-scroll";
 import {
   FaFacebookF,
@@ -10,39 +10,10 @@ import {
 } from "react-icons/fa6";
 import "../styles/members.css";
 
-interface Members {
-  id: number;
-  full_name: string;
-  role: string;
-  bio: string;
-  email: string;
-  phone: string;
-  message: string;
-  profile_img: string;
-  alt: string;
-}
-
 const Members = () => {
-  const [members, setMembers] = useState<Members[]>([]);
   const [expandedCards, setExpandedCards] = useState<{
     [key: number]: boolean;
   }>({});
-
-  useEffect(() => {
-    const fetchMembers = async () => {
-      const { data, error } = await supabase
-        .from("team_members")
-        .select("*")
-        .order("id", { ascending: true });
-      if (error) {
-        console.error("Error fetching members:", error);
-      } else {
-        setMembers(data || []);
-      }
-    };
-
-    fetchMembers();
-  }, []);
 
   const toggleText = (id: number) => {
     setExpandedCards((prev) => ({
@@ -73,13 +44,13 @@ const Members = () => {
               (
                 {
                   id,
-                  full_name,
+                  fullName,
                   role,
                   bio,
                   email,
                   phone,
                   message,
-                  profile_img,
+                  profileImg,
                   alt,
                 },
                 index
@@ -88,7 +59,7 @@ const Members = () => {
                 return (
                   <div className="member-card" key={id}>
                     <img
-                      src={profile_img}
+                      src={profileImg}
                       alt={alt}
                       className="member-image"
                       loading="lazy"
@@ -102,7 +73,7 @@ const Members = () => {
                       }}
                     />
                     <div className="card-content">
-                      <h3 className="member-name">{full_name}</h3>
+                      <h3 className="member-name">{fullName}</h3>
                       <p className="member-role">{role}</p>
                       <p className="member-bio">{bio}</p>
                       {isExpanded && (
