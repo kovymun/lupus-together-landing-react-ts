@@ -1,11 +1,7 @@
 :root {
   --primary-color: #7b6cf6;
-  --secondary-color: #d69585;
   --text-color: #333333;
   --muted-text-color: #777777;
-  --primary-font-family: "Quicksand", sans-serif;
-  --secondary-font-family: "Playfair Display", Georgia;
-  --background-color: #faf8fc;
 }
 .story-content {
   display: grid;
@@ -17,7 +13,7 @@
 }
 
 .story-card {
-  padding: 1.25rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
   border-radius: 0.75rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   background: #fff;
@@ -51,23 +47,24 @@
   font-size: clamp(1rem, 1.2vw + 0.5rem, 1.25rem);
   font-weight: 600;
   color: var(--text-color);
+  margin-bottom: 0.25rem;
 }
 
 .avatar-title span:last-child {
   font-size: clamp(0.75rem, 0.9vw + 0.4rem, 1rem);
-  /* color: var(--muted-text-color); */
-  color: #666;
+  color: #666666;
 }
 
 .story-card blockquote {
-  margin-top: 2em;
-  font-size: 1rem;
+  margin-top: 1.5rem;
+  font-size: clamp(0.85rem, 1vw + 0.3rem, 1rem);
   font-style: italic;
   text-align: justify;
+  line-height: 1.6;
 }
 
 .date-posted {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   text-align: left;
   font-size: clamp(0.75rem, 0.9vw + 0.4rem, 1rem);
   font-style: italic;
