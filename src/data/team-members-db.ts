@@ -20,7 +20,7 @@ export const members: Member[] = [
     id: 2,
     fullName: "Emma van der Merwe",
     role: "Operations & Outreach Lead",
-    bio: "Emma watched her mother struggle quietly with Lupus. That aching silence drove her to act. Today, she leads outreach with deep compassion - showing patients they matter, are seen, are heard, and never alone.",
+    bio: "Emma watched her mother struggle quietly with Lupus. That aching silence drove her to act. Today, she leads outreach with deep compassion, showing patients they matter, are seen, are heard, and never alone.",
     email: "emma.vdm@lupustogether.org",
     phone: "+27 81 123 4567",
     message:
