@@ -20,7 +20,6 @@ body {
   font-family: var(--primary-font-family);
   background-color: var(--background-color);
   color: var(--text-color);
-  /* line-height: 1.6; */
 }
 
 section:not(#hero) {
@@ -35,7 +34,6 @@ section:not(#hero) {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   margin: 2rem;
   padding: 3rem;
-  /* border: 2px solid red; */
 }
 
 .section-header {
@@ -99,20 +97,22 @@ a {
 .hero-content h1 {
   font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
   color: var(--primary-color);
-  margin-bottom: 0.2rem;
+  margin-bottom: 1rem;
   font-weight: 800;
 }
 
 .hero-content p {
   font-size: clamp(1rem, 1vw + 0.5rem, 1.1rem);
   margin-bottom: 1.5rem;
+  line-height: 1.6;
   color: var(--text-color);
   font-family: var(--secondary-font-family);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05rem;
 }
 
 .site-btn {
-  padding: 0.75rem 1.25rem;
+  display: inline-block;
+  padding: 0.875rem 1.25rem;
   font-size: clamp(0.9rem, 0.6vw + 0.5rem, 1rem);
   background-color: var(--secondary-color);
   color: #ffffff;
@@ -156,12 +156,11 @@ a {
   max-width: 400px;
   border-radius: 12px;
   object-fit: cover;
-  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   filter: contrast(1.05) brightness(1.03);
 }
 
 /* Responsive Styling */
-
 @media (max-width: 425px) {
   .section-wrapper {
     margin: 1em;
@@ -172,5 +171,8 @@ a {
 @media (max-width: 700px) {
   .hero-image {
     display: none;
+  }
+  .hero-content {
+    text-align: center;
   }
 }
