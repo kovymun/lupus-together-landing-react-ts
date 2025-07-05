@@ -27,7 +27,7 @@ const UnderstandingLupus = () => {
                 className="float-image img-one"
                 loading="lazy"
               />
-              <p className="lupus-text">
+              <p>
                 Lupus is an autoimmune condition where the immune system,
                 instead of protecting the body, mistakenly reacts against
                 healthy tissues. This may cause inflammation in areas like the
@@ -42,7 +42,7 @@ const UnderstandingLupus = () => {
                 className="float-image img-two"
                 loading="lazy"
               />
-              <p className="lupus-text">
+              <p>
                 According to the Lupus Foundation of America, an estimated 5
                 million people worldwide are living with lupus. In South Africa,
                 it's believed to affect about 1 in every 1000 people, and many
