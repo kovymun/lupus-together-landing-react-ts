@@ -66,13 +66,12 @@ T
 
 ### Screenshots
 
-<img width="405" height="362" alt="Lupus Together Hero Page" src="https://github.com/user-attachments/assets/14a380d8-7d2a-4cf9-86a9-2c859febbcbf" />
-<img width="405" height="362" alt="Lupus Together About section" src="https://github.com/user-attachments/assets/cb6f361f-b895-4383-81bd-814cad9ff855" />
+<img width="790" height="349" alt="Lupus Together Hero section" src="https://github.com/user-attachments/assets/05e3200e-2292-46a8-8406-d82d31184281" />
 <br/>
+<img width="405" height="362" alt="Lupus Together About section" src="https://github.com/user-attachments/assets/cb6f361f-b895-4383-81bd-814cad9ff855" />
 <img width="405" height="251" alt="Lupus Together Understanding Lupus section" src="https://github.com/user-attachments/assets/896c5ea3-a8c7-40a5-adc6-e4ef93a12e13" />
 <br/>
 <img width="404" height="322" alt="Lupus Together Testimonial section" src="https://github.com/user-attachments/assets/ea950122-8ca7-4bf0-87d1-8dfac3efcfae" />
-<br/>
 <img width="405" height="321" alt="Image" src="https://github.com/user-attachments/assets/49389ba8-c0b6-4ba0-8063-888f8387f89b" />
 <br/>
 <img width="405" height="373" alt="Image" src="https://github.com/user-attachments/assets/8c1d78f0-b7eb-4508-b6e3-cb1b2a102cc2" />
