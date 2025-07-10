@@ -62,7 +62,7 @@ Follow these steps to set up the project on your local machine:
 4. **Navigate into the project folder:** cd lupus-together-landing-react-ts
 5. **Install all dependencies:** npm install or npm i
 6. **Start the development server:** npm run dev
-7. The app should now be running locally at localhost:3000
+7. The app should now be running locally at localhost:5173
 8. Open the landing page in the browser of your choice.
 
 ### Usage Guide
