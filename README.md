@@ -1,6 +1,6 @@
 ## Lupus Together Landing Page (React + TypeScript)
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3) ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-EF0179?style=for-the-badge&logo=framer) ![React Scroll](https://img.shields.io/badge/React--Scroll-61DAFB?style=for-the-badge) ![React Icons](https://img.shields.io/badge/React--Icons-000000?style=for-the-badge)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3) ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-EF0179?style=for-the-badge&logo=framer) ![React Scroll](https://img.shields.io/badge/React--Scroll-61DAFB?style=for-the-badge) ![React Icons](https://img.shields.io/badge/React--Icons-000000?style=for-the-badge) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
 ### Table of Contents:
 
@@ -17,7 +17,7 @@
 
 ### Description and Purpose
 
-Lupus Together is a front-end landing page built with care, empathy, and intention. Inspired by a loved one’s journey with Lupus, this project serves as a heartfelt digital space for awareness, connection, and support.
+Lupus Together is a front-end landing page built with care, empathy, and intention. Inspired by a loved one's journey with Lupus, this project serves as a heartfelt digital space for awareness, connection, and support.
 
 Built using React, TypeScript, Vanilla CSS, and animated with Framer Motion, it follows landing page best practices, offering a clear, inviting, and emotionally resonant experience for those affected by Lupus.
 
@@ -49,9 +49,17 @@ Follow these steps to set up the project on your local machine:
 
 #### Steps:
 
+1. **Create a directory for the project:** Open your terminal and run mkdir `<your-directory-name>` | cd `<your-directory-name>`.
+2. **Open the folder in VS Code:** run `code .`
+3. **Clone the repository into the folder:** git clone https://github.com/kovymun/lupus-together-landing-react-ts.gition.git
+4. **Navigate into the project folder:** cd lupus-together-landing-react-ts
+5. **Install all dependencies:** npm install or npm i
+6. **Start the development server:** npm run dev
+7. The app should now be running locally at localhost:3000
+
 ### Screenshots
 
-<img src="https://github.com/user-attachments/assets/06fb6ecf-373d-4a80-abe7-b1218a448ba1" width="350"/>
+<img src="https://github.com/user-attachments/assets/06fb6ecf-373d-4a80-abe7-b1218a448ba1" width="350" height=350/>
 <br/>
 <img src="https://github.com/user-attachments/assets/e9eb6303-efd1-420b-985c-6cf23007b34a" width="350"/>
 
