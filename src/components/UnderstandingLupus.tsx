@@ -1,5 +1,4 @@
 import { Element } from "react-scroll";
-import "../styles/lupus.css";
 
 import ribbon from "../assets/ribbon.webp";
 import doctor from "../assets/doctor.webp";
