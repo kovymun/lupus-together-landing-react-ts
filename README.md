@@ -56,8 +56,17 @@ Follow these steps to set up the project on your local machine:
 5. **Install all dependencies:** npm install or npm i
 6. **Start the development server:** npm run dev
 7. The app should now be running locally at localhost:3000
+8. Open the landing page in the browser of your choice.
+
+### Usage Guide
+
+Follow the steps below to interact with the application:
+
+T
 
 ### Screenshots
+
+<img width="790" height="349" alt="Image" src="https://github.com/user-attachments/assets/14a380d8-7d2a-4cf9-86a9-2c859febbcbf" />
 
 <img src="https://github.com/user-attachments/assets/06fb6ecf-373d-4a80-abe7-b1218a448ba1" width="350" height=350/>
 <br/>
