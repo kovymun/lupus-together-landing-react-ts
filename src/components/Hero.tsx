@@ -47,9 +47,17 @@ const Hero = () => {
           </motion.div>
         </motion.div>
         <div className="hero-image">
-          <img
+          <motion.img
             src={holdingHands}
             alt="People holding hands, symbolizing community and empathy for people with Lupus"
+            loading="lazy"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 1,
+              ease: [0.25, 0.46, 0.45, 0.94],
+              delay: 1,
+            }}
           />
         </div>
       </section>
