@@ -69,7 +69,7 @@ T
 <img width="790" height="349" alt="Lupus Together Hero section" src="https://github.com/user-attachments/assets/05e3200e-2292-46a8-8406-d82d31184281" />
 <br/>
 <img width="405" height="362" alt="Lupus Together About section" src="https://github.com/user-attachments/assets/cb6f361f-b895-4383-81bd-814cad9ff855" />
-<img width="405" height="251" alt="Lupus Together Understanding Lupus section" src="https://github.com/user-attachments/assets/896c5ea3-a8c7-40a5-adc6-e4ef93a12e13" />
+<img width="405" height="362" alt="Lupus Together Understanding Lupus section" src="https://github.com/user-attachments/assets/896c5ea3-a8c7-40a5-adc6-e4ef93a12e13" />
 <br/>
 <img width="404" height="322" alt="Lupus Together Testimonial section" src="https://github.com/user-attachments/assets/ea950122-8ca7-4bf0-87d1-8dfac3efcfae" />
 <img width="405" height="321" alt="Image" src="https://github.com/user-attachments/assets/49389ba8-c0b6-4ba0-8063-888f8387f89b" />
@@ -86,9 +86,16 @@ This project reflects a passion for building applications that are not only tech
 
 ### Disclaimer
 
-All names, services, testimonials, and brand references, including _Lupus Together_, are fictional and created for the sole purpose of demonstrating software development, UI/UX design, and implementation best practices. Any resemblance to real individuals or organizations is purely coincidental.
+All names, services, testimonials, locations, and brand references, including _Lupus Together_, are fictional and created for the sole purpose of demonstrating software development, UI/UX design, and implementation best practices. Any resemblance to real individuals or organizations is purely coincidental.
 
 Images used are royalty-free and sourced from **[Unsplash](https://unsplash.com/)** and **[Lummi AI](https://www.lummi.ai/)** , optimized for performance (WebP format). Social links included are placeholders to demonstrate UI layout and design.
+
+### Future Plans
+
+- **Migrate to Astro.js**: for improved app performance and enhanced SEO/GEO capabilities.
+- **Light & Dark Theme Toggle**: to improve accessibility and user preference support.
+- **Scroll-triggered Animations**: for a smoother, more interactive visual experience.
+- **Deploy to Production**: make the project live and accessible to users.
 
 ### Credits
 
