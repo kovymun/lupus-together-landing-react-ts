@@ -66,7 +66,7 @@ T
 
 ### Screenshots
 
-<img width="790" height="349" alt="Lupus Together Hero Page" src="https://github.com/user-attachments/assets/14a380d8-7d2a-4cf9-86a9-2c859febbcbf" />
+<img width="405" height="362" alt="Lupus Together Hero Page" src="https://github.com/user-attachments/assets/14a380d8-7d2a-4cf9-86a9-2c859febbcbf" />
 <br/>
 <img width="405" height="362" alt="Lupus Together About section" src="https://github.com/user-attachments/assets/cb6f361f-b895-4383-81bd-814cad9ff855" />
 <br/>
