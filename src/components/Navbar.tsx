@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimesCircle, FaHeart } from "react-icons/fa";
 import "../styles/navbar.css";
-import { motion } from "motion/react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -40,13 +39,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <motion.nav
-      className="navbar"
-      ref={navRef}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-    >
+    <nav className="navbar" ref={navRef}>
       <Link
         to="home"
         spy={true}
@@ -140,7 +133,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="mobile-nav-overlay" onClick={handleNavToggle} />
       )}
-    </motion.nav>
+    </nav>
   );
 };
 

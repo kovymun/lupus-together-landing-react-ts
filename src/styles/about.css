@@ -12,6 +12,10 @@
   text-align: center;
 }
 
+.about-subheading {
+  margin-bottom: 1rem;
+}
+
 .about-list {
   list-style: none;
   padding-left: 0;
@@ -41,6 +45,7 @@
   font-style: italic;
   color: var(--text-color);
   font-size: clamp(1rem, 2.5vw, 1.125rem);
+  line-height: 1.6;
 }
 
 .community-author {
