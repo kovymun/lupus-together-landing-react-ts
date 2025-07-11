@@ -21,7 +21,7 @@
 
 Lupus Together is a front-end landing page built with care, empathy, and intention. Inspired by a loved one's journey with Lupus, this project serves as a heartfelt digital space for awareness, connection, and support.
 
-Built using React, TypeScript, Vanilla CSS, and animated with Framer Motion, it follows landing page best practices, offering a clear, inviting, and emotionally resonant experience for those affected by Lupus.
+Built using React, TypeScript and Vanilla CSS, it follows landing page best practices, offering a clear, inviting, and emotionally resonant experience for those affected by Lupus.
 
 This personal project combines thoughtful UI/UX with meaningful storytelling to gently educate, uplift, and welcome future members into a compassionate community.
 
@@ -37,7 +37,7 @@ This personal project combines thoughtful UI/UX with meaningful storytelling to 
 - **Front-end Framework:** React (structured using functional components)
 - **Programming Language:** TypeScript
 - **Styling:** Vanilla CSS
-- **Animations:** CSS Transitions + Framer Motion (Motion)
+- **Animations:** CSS Transitions
 - **Build Tool:** Vite (for scaffolding and fast development)
 
 #### Additional Libraries:
