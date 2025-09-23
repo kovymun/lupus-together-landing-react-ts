@@ -19,8 +19,13 @@ const JoinForm = () => {
             {" "}
             <form className="join-form">
               <div className="input-container">
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" required />
+                <label htmlFor="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required />
+              </div>
+
+              <div className="input-container">
+                <label htmlFor="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required />
               </div>
 
               <div className="input-container">
