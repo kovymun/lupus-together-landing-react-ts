@@ -29,7 +29,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 }
 
 .input-container {
@@ -37,6 +36,7 @@
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-bottom: 1.2rem;
 }
 
 /* Label styling */
@@ -85,6 +85,14 @@
   padding: 1rem 1.8rem;
   letter-spacing: 0.06em;
   border-radius: 0;
+}
+
+.form-error-text {
+  width: 100%;
+  text-align: left;
+  display: block;
+  font-size: 0.75rem;
+  color: #ef4444;
 }
 
 /* Responsive Styling */
