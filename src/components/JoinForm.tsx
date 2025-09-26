@@ -87,6 +87,10 @@ const JoinForm = () => {
                       value: true,
                       message: "Please enter first name",
                     },
+                    maxLength: {
+                      value: 15,
+                      message: "First name cannot exceed 15 characters",
+                    },
                   })}
                 />
                 {errors.firstName && (
@@ -104,6 +108,10 @@ const JoinForm = () => {
                     required: {
                       value: true,
                       message: "Please enter last name",
+                    },
+                    maxLength: {
+                      value: 15,
+                      message: "Last name cannot exceed 15 characters",
                     },
                   })}
                 />
