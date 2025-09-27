@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Element } from "react-scroll";
 import toast from "react-hot-toast";
@@ -21,6 +22,14 @@ const JoinForm = () => {
     reset,
     formState: { errors, isSubmitting },
   } = useForm<JoinCommInputs>();
+  // State to hold API response
+  const [apiResponse, setApiResponse] = useState<unknown>(null);
+
+  useEffect(() => {
+    if (apiResponse) {
+      console.log("Backend response:", apiResponse);
+    }
+  }, [apiResponse]);
 
   // Validation Regex patterns
   const emailRegexPattern = new RegExp(
@@ -40,17 +49,39 @@ const JoinForm = () => {
       duration: 4000,
     });
 
-  const reqJoinComm = async (formData: JoinCommInputs) => {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+  const reqJoinComm = async (data: JoinCommInputs) => {
     try {
       // Simulate async delay
       await new Promise<void>((resolve) => setTimeout(resolve, 3000));
 
       //Log the user input to the console
-      console.log("Community Member:", formData);
+      // console.log("Community Member:", formData);
 
       // JSON conversion simulation
-      const json = JSON.stringify(formData);
-      console.log("JSON Payload to be sent to backend:", json);
+      // const json = JSON.stringify(formData);
+      // console.log("JSON Payload to be sent to backend:", json);
+
+      // Prepare payload for backend (Python naming convention format)
+      const payload = {
+        first_name: data.firstName,
+        last_name: data.lastName,
+        email: data.email,
+        phone: data.phone ?? "",
+        message: data.message ?? "",
+        consent: data.consent,
+      };
+
+      const res = await fetch(`${API_BASE_URL}/api/community/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const json = await res.json();
+
+      setApiResponse(json);
 
       // Reset form
       reset();
