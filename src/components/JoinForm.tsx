@@ -151,7 +151,7 @@ const JoinForm = () => {
                 )}
               </div>
 
-              {/* Contact Phone Number */}
+              {/* Contact Email Number */}
               <div className="input-container">
                 <label htmlFor="email">Email</label>
                 <input
@@ -173,13 +173,14 @@ const JoinForm = () => {
                 )}
               </div>
 
-              {/* Contact Email Number */}
+              {/* Contact Phone Number */}
               <div className="input-container">
                 {" "}
                 <label htmlFor="phone">Phone Number</label>
                 <input
                   type="tel"
                   id="phone"
+                  maxLength={10}
                   {...register("phone", {
                     required: {
                       value: true,
