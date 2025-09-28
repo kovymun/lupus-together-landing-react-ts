@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Element } from "react-scroll";
 import toast from "react-hot-toast";
+import { FaHeart } from "react-icons/fa";
 import "../styles/join.css";
 
 // Structure of all form fields used in the "Join the Community" form.
@@ -14,6 +15,12 @@ interface JoinCommInputs {
   consent: boolean;
 }
 
+interface Response {
+  title: string;
+  success: boolean;
+  errors?: Record<string, unknown>;
+}
+
 const JoinForm = () => {
   // Initialize form with react-hook-form
   const {
@@ -22,14 +29,16 @@ const JoinForm = () => {
     reset,
     formState: { errors, isSubmitting },
   } = useForm<JoinCommInputs>();
+
   // State to hold API response
-  const [apiResponse, setApiResponse] = useState<unknown>(null);
+  const [responseStatus, setResponseStatus] = useState<Response | null>(null);
 
   useEffect(() => {
-    if (apiResponse) {
-      console.log("Backend response:", apiResponse);
+    if (responseStatus) {
+      console.log("Backend response:", responseStatus);
+      console.log("Backend response type:", typeof responseStatus);
     }
-  }, [apiResponse]);
+  }, [responseStatus]);
 
   // Validation Regex patterns
   const emailRegexPattern = new RegExp(
@@ -37,38 +46,56 @@ const JoinForm = () => {
   );
   const mobileRegexPattern = new RegExp(/^[0-9]{10}$/);
 
-  // Show success toast message (TBC)
-  // const notifySuccess = () =>
-  //   toast.success("Success!", {
-  //     duration: 4000,
-  //   });
+  // Show success toast message
+  const notifySuccess = () =>
+    toast.success(
+      <div>
+        <strong>
+          {" "}
+          <FaHeart
+            size={16}
+            style={{ color: "#7b6cf6", marginRight: "0.5em" }}
+          />
+          Welcome to Lupus Together!
+        </strong>
+        <p>
+          You're now part of a community that cares and understands your
+          journey.
+        </p>
+        <p>
+          Share your story, connect with others, and find inspiration in every
+          step.
+        </p>
+        <p>
+          Remember, you are not alone, help, support, and friendship are just a
+          click away!
+        </p>
+      </div>,
+      {
+        duration: 6000,
+        icon: null,
+      }
+    );
 
   // Show error toast message
-  const notifyError = () =>
-    toast.error("Something went wrong! Please try again.", {
-      duration: 4000,
-    });
+  // const notifyError = () =>
+  //   toast.error("Something went wrong! Please try again.", {
+  //     duration: 4000,
+  //   });
 
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   const reqJoinComm = async (data: JoinCommInputs) => {
     try {
       // Simulate async delay
-      await new Promise<void>((resolve) => setTimeout(resolve, 3000));
-
-      //Log the user input to the console
-      // console.log("Community Member:", formData);
-
-      // JSON conversion simulation
-      // const json = JSON.stringify(formData);
-      // console.log("JSON Payload to be sent to backend:", json);
+      await new Promise<void>((resolve) => setTimeout(resolve, 2000));
 
       // Prepare payload for backend (Python naming convention format)
       const payload = {
         first_name: data.firstName,
         last_name: data.lastName,
         email: data.email,
-        phone: data.phone ?? "",
+        phone: data.phone,
         message: data.message ?? "",
         consent: data.consent,
       };
@@ -81,13 +108,15 @@ const JoinForm = () => {
 
       const json = await res.json();
 
-      setApiResponse(json);
+      setResponseStatus(json);
 
       // Reset form
       reset();
+
+      notifySuccess();
     } catch (error) {
       console.error("Error submitting form:", error);
-      notifyError();
+      // notifyError();
     }
   };
 
@@ -112,7 +141,7 @@ const JoinForm = () => {
                 <label htmlFor="firstName">First Name</label>
                 <input
                   type="text"
-                  id="first-name"
+                  id="firstName"
                   {...register("firstName", {
                     required: {
                       value: true,
@@ -134,7 +163,7 @@ const JoinForm = () => {
                 <label htmlFor="lastName">Last Name</label>
                 <input
                   type="text"
-                  id="last-name"
+                  id="lastName"
                   {...register("lastName", {
                     required: {
                       value: true,
@@ -250,7 +279,7 @@ const JoinForm = () => {
                 className="site-btn join-form-btn"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Submitting......" : "Join our Community"}
+                {isSubmitting ? "Submitting..." : "Join our Community"}
               </button>
             </form>
           </div>

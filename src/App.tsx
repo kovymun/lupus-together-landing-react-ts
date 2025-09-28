@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -10,6 +11,16 @@ import UnderstandingLupus from "./components/UnderstandingLupus";
 function App() {
   return (
     <>
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          style: {
+            textAlign: "center",
+            lineHeight: "1.8",
+            padding: "1rem",
+          },
+        }}
+      ></Toaster>
       <Navbar />
       <main>
         <Hero />
