@@ -16,7 +16,10 @@ def community_members(request):
     elif request.method == 'POST':
         serializer = CommunityMemberSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        print(serializer.errors)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            try:
+                serializer.save()
+                return Response({"title": "apiResponse", "success": True}, status=status.HTTP_201_CREATED)
+            except Exception as e:
+                return Response({"title": "apiResponse", "success": False, "errors": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        # Handle validation errors
+        return Response({"title": "apiResponse", "success": False, "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
