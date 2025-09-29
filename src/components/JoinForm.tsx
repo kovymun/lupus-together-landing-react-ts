@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Element } from "react-scroll";
 import toast from "react-hot-toast";
-import { FaHeart } from "react-icons/fa";
 import "../styles/join.css";
 
 // Structure of all form fields used in the "Join the Community" form.
@@ -18,7 +16,9 @@ interface JoinCommInputs {
 interface Response {
   title: string;
   success: boolean;
-  errors?: Record<string, unknown>;
+  errors?: {
+    [key: string]: string[];
+  };
 }
 
 const JoinForm = () => {
@@ -30,34 +30,17 @@ const JoinForm = () => {
     formState: { errors, isSubmitting },
   } = useForm<JoinCommInputs>();
 
-  // State to hold API response
-  const [responseStatus, setResponseStatus] = useState<Response | null>(null);
-
-  useEffect(() => {
-    if (responseStatus) {
-      console.log("Backend response:", responseStatus);
-      console.log("Backend response type:", typeof responseStatus);
-    }
-  }, [responseStatus]);
-
   // Validation Regex patterns
   const emailRegexPattern = new RegExp(
     /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/
   );
   const mobileRegexPattern = new RegExp(/^[0-9]{10}$/);
 
-  // Show success toast message
+  // Success toast message
   const notifySuccess = () =>
     toast.success(
       <div>
-        <strong>
-          {" "}
-          <FaHeart
-            size={16}
-            style={{ color: "#7b6cf6", marginRight: "0.5em" }}
-          />
-          Welcome to Lupus Together!
-        </strong>
+        <strong>💜 Welcome to Lupus Together!</strong>
         <p>
           You're now part of a community that cares and understands your
           journey.
@@ -77,11 +60,31 @@ const JoinForm = () => {
       }
     );
 
-  // Show error toast message
-  // const notifyError = () =>
-  //   toast.error("Something went wrong! Please try again.", {
-  //     duration: 4000,
-  //   });
+  //error toast message
+  const notifyError = (msg: string) =>
+    msg
+      ? toast.error(
+          <div>
+            <strong>❌ Oops!</strong>
+            <p>
+              It looks like this email is already registered on our network. If
+              you've signed up before, you might already be part of our
+              community 💜.
+            </p>
+          </div>,
+          { duration: 6000, icon: null }
+        )
+      : toast.error(
+          <div>
+            <strong>⚠️ Oops!</strong>
+            <p>We ran into an issue while processing your request.</p>
+            <p>Please try again in a moment.</p>
+          </div>,
+          {
+            duration: 6000,
+            icon: null,
+          }
+        );
 
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -106,17 +109,27 @@ const JoinForm = () => {
         body: JSON.stringify(payload),
       });
 
-      const json = await res.json();
+      const json: Response = await res.json();
+      const emailError: string | undefined = json?.errors?.email?.[0];
 
-      setResponseStatus(json);
-
-      // Reset form
-      reset();
-
-      notifySuccess();
+      if (res.ok && json.success) {
+        notifySuccess();
+        reset();
+      } else {
+        console.error("Backend fetch error:", json.errors);
+        notifyError(emailError || "Something went wrong! Please try again.");
+        reset();
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
-      // notifyError();
+      toast.error(
+        <div>
+          <strong>⚠️ Oh no!</strong>
+          <p>We're having trouble connecting right now.</p>
+          <p>Please try again soon, your presence means a lot 💜.</p>
+        </div>,
+        { duration: 4000, icon: null }
+      );
     }
   };
 
