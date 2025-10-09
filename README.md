@@ -10,6 +10,7 @@
 - [Installation Guide](#installation-guide)
 - [Usage Guide](#usage-guide)
 - [Screenshots](#screenshots)
+- [Testing](#testing)
 - [Acknowledgment](#acknowledgment)
 - [Notes](#notes)
 - [Disclaimer](#disclaimer)
@@ -101,6 +102,24 @@ This website/landing page is structured into several key sections designed to gu
 <img width="405" height="321" alt="Image" src="https://github.com/user-attachments/assets/49389ba8-c0b6-4ba0-8063-888f8387f89b" />
 <br/>
 <img width="405" height="373" alt="Image" src="https://github.com/user-attachments/assets/8c1d78f0-b7eb-4508-b6e3-cb1b2a102cc2" />
+
+### Testing
+
+#### Front-end testing
+
+#### Back-end testing (Django + Pytest)
+
+This section tracks backend tests as they are added. Each test includes a short reason and a status to keep things easy to follow.
+
+1. **Model test**
+
+- To confirm that the CommunityMember model can be created, behaves as expected, and that user details are saved to the database correctly.
+- **RESULT:** Passed
+
+2. **Serializer validation tests**
+
+- To ensure that the _CommunityMemberSerializer_ correctly validates input data, enforcing required fields and field constraints. Includes checks for missing fields such as _first_name_ or _last_name_.
+- **RESULT:** Passed
 
 ### Acknowledgment
 
