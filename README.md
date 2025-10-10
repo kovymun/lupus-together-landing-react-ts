@@ -111,15 +111,20 @@ This website/landing page is structured into several key sections designed to gu
 
 This section tracks backend tests as they are added. Each test includes a short reason and a status to keep things easy to follow.
 
-1. **Model test**
+1. **Model test:**
 
 - To confirm that the CommunityMember model can be created, behaves as expected, and that user details are saved to the database correctly.
 - **RESULT:** Passed
 
-2. **Serializer validation tests**
+2. **Serializer validation tests:**
 
 - To ensure that the _CommunityMemberSerializer_ correctly validates input data, enforcing required fields and field constraints. Includes checks for missing fields such as _first_name_ or _last_name_.
 - **RESULT:** Passed
+
+3. **Views test:**
+
+- To confirm the `/community/` endpoint correctly handles GET and POST requests with both valid and invalid data.
+- **RESULT**: Passed
 
 ### Acknowledgment
 
