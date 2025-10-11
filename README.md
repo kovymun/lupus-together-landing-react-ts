@@ -105,9 +105,9 @@ This website/landing page is structured into several key sections designed to gu
 
 ### Testing
 
-#### Front-end testing
-
 #### Back-end testing (Django + Pytest)
+
+Integration tests:
 
 This section tracks backend tests as they are added. Each test includes a short reason and a status to keep things easy to follow.
 
@@ -124,6 +124,11 @@ This section tracks backend tests as they are added. Each test includes a short 
 3. **Views test:**
 
 - To confirm the `/community/` endpoint correctly handles GET and POST requests with both valid and invalid data.
+- **RESULT**: Passed
+
+4. POST req endpoint test: duplicate email
+
+- To confirm that submitting a POST request with an email that already exists in the database returns a validation error and prevents duplicate entries.
 - **RESULT**: Passed
 
 ### Acknowledgment
@@ -146,6 +151,7 @@ Images used are royalty-free and sourced from **[Unsplash](https://unsplash.com/
 - **Light & Dark Theme Toggle**: to improve accessibility and user preference support.
 - **Scroll-triggered Animations**: for a smoother, more interactive visual experience.
 - **Deploy to Production**: make the project live and accessible to users.
+- **Backend**: Integrate Django Backend.
 
 ### Credits
 
