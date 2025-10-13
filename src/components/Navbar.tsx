@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-scroll";
-import { FaBars, FaTimesCircle, FaHeart } from "react-icons/fa";
+import { FaBars, FaTimesCircle, FaHeart, FaHome } from "react-icons/fa";
 import "../styles/navbar.css";
 
 const Navbar = () => {
@@ -48,8 +48,14 @@ const Navbar = () => {
         duration={700}
         className="brand-logo"
       >
-        <FaHeart size={20} />
-        <span className="navbar-brand">Lupus Together</span>
+        <div className="logo-container nav-logo">
+          <FaHeart size={20} />
+          <span className="navbar-brand">Lupus Together</span>
+        </div>
+        <div className="logo-container nav-home">
+          <FaHome size={24} />
+          <span className="navbar-brand">Home</span>
+        </div>
       </Link>
 
       <ul className={`navbar-links ${isMenuOpen ? "mobile-nav-active" : ""}`}>

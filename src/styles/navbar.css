@@ -24,19 +24,46 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.navbar-brand {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: var(--primary-color);
-}
-
 .brand-logo {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: var(--primary-color);
   cursor: pointer;
   text-decoration: none;
+}
+
+.nav-logo {
+  transition: opacity 300ms ease;
+}
+
+.brand-logo:hover .nav-logo {
+  opacity: 0;
+}
+
+.brand-logo .nav-home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+}
+
+.brand-logo:hover .nav-home {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primary-color);
 }
 
 .navbar-links {
