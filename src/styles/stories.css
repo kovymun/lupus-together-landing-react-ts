@@ -1,8 +1,3 @@
-:root {
-  --primary-color: #7b6cf6;
-  --text-color: #333333;
-  --muted-text-color: #777777;
-}
 .story-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -16,7 +11,7 @@
   padding: clamp(1rem, 3vw, 1.5rem);
   border-radius: 0.75rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  background: #fff;
+  background: var(--site-wide-white);
   border-top: 3px solid var(--primary-color);
 }
 
@@ -32,7 +27,7 @@
   flex-shrink: 0;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #fff;
+  border: 3px solid var(--site-wide-white);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 

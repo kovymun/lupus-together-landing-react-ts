@@ -1,16 +1,6 @@
-:root {
-  --primary-color: #7b6cf6;
-  --secondary-color: #d69585;
-  --accent-color: #ff8c42;
-  --text-color: #333333;
-  --muted-text-color: #777777;
-  --primary-font-family: "Quicksand", sans-serif;
-  --secondary-font-family: "Playfair Display", Georgia;
-}
-
 .footer {
   background-color: var(--primary-color);
-  color: #ffffff;
+  color: var(--site-wide-white);
   font-family: var(--primary-font-family);
 }
 
@@ -61,7 +51,7 @@
 }
 
 .footer a {
-  color: #ffffff;
+  color: var(--site-wide-white);
   text-decoration: none;
 }
 
@@ -97,7 +87,7 @@
 
 .footer-social-icons a {
   background-color: var(--primary-color);
-  color: #ffffff;
+  color: var(--site-wide-white);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -111,7 +101,7 @@
 
 .footer-social-icons a:hover {
   transform: translateY(-2px) scale(1.05);
-  background-color: #ffffff;
+  background-color: var(--site-wide-white);
   color: var(--text-color);
   box-shadow: 0 4px 12px rgba(123, 108, 246, 0.35);
 }
