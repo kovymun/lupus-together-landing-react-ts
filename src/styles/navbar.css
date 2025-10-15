@@ -188,7 +188,7 @@
     max-width: 300px;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
+    background-color: var(--site-wide-white);
     gap: 2rem;
     padding: 2rem;
     transition: right 300ms ease;
@@ -243,11 +243,21 @@
 
 /* Larger screen styling */
 
-@media screen and (min-width: 1100px) {
-  .navbar-links .active {
+/* Light mode (1100px+) */
+@media screen and (min-width: 1100px) and (prefers-color-scheme: light) {
+  .navbar-links a.active {
     font-weight: bold;
     color: var(--primary-color);
     border-bottom: 3px solid var(--secondary-color);
-    transition: all 0.3s ease;
+  }
+}
+
+/* Dark mode (1100px+) */
+@media screen and (min-width: 1100px) and (prefers-color-scheme: dark) {
+  .navbar-links a.active {
+    font-weight: 600;
+    color: #d1d1d1;
+    border-bottom: 3px solid var(--secondary-color);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.15);
   }
 }

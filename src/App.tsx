@@ -17,7 +17,8 @@ function App() {
           style: {
             textAlign: "center",
             lineHeight: "1.8",
-            padding: "1rem",
+            backgroundColor: "var(--background-color)",
+            color: "var(--text-color)",
           },
         }}
       ></Toaster>

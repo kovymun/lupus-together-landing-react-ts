@@ -33,17 +33,6 @@
     --muted-text-color: #9a9a9a;
 
     --input-border: #555;
-
-    .navbar-links a.active {
-      color: #d1d1d1;
-      font-weight: 600;
-      border-bottom: 3px solid var(--secondary-color);
-    }
-
-    /* Subtle glow effect on active link */
-    .navbar-links a.active {
-      text-shadow: 0 0 6px rgba(255, 255, 255, 0.15);
-    }
   }
 }
 
