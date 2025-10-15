@@ -17,6 +17,25 @@
   --secondary-font-family: "Playfair Display", Georgia;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1f1b29;
+    --quote-background-color: #252232;
+    --form-background-color: #252232;
+    --site-wide-white: #2d2a3b;
+
+    --primary-color: #9c8cff; /* same hue, more glow */
+    --secondary-color: #e6a196;
+    --accent-color: #ffa76c; /* softer orange that glows against dark */
+    --btn-hover-color: #d5897c; /* adjust just slightly */
+
+    --text-color: #eeeeee; /* softer than pure white for UX */
+    --muted-text-color: #9a9a9a;
+
+    --input-border: #555;
+  }
+}
+
 /* Resetting default Style settings */
 * {
   margin: 0;
