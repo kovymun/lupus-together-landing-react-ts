@@ -3,6 +3,7 @@ from .models import CommunityMember
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
+from django.conf import settings
 
 @api_view(['GET', 'POST'])
 def community_members(request):
@@ -12,14 +13,37 @@ def community_members(request):
         members = CommunityMember.objects.all()
         serializer = CommunityMemberSerializer(members, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+    
     # Handle POST requests for community members
     elif request.method == 'POST':
+        # SECURITY CHECK: Verify the frontend key
+        client_token = request.headers.get('X-FRONTEND-KEY')
+        if client_token != settings.FE_TOKEN:
+            return Response(
+                {"title": "apiResponse", "success": False, "errors": "Unauthorized request"},
+                status=status.HTTP_401_UNAUTHORIZED
+            )
+
+        # Proceed with normal POST logic if all validations pass
         serializer = CommunityMemberSerializer(data=request.data)
         if serializer.is_valid():
             try:
                 serializer.save()
-                return Response({"title": "apiResponse", "success": True}, status=status.HTTP_201_CREATED)
+                return Response(
+                    {"title": "apiResponse", "success": True},
+                    status=status.HTTP_201_CREATED
+                )
             except Exception as e:
-                return Response({"title": "apiResponse", "success": False, "errors": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+                return Response(
+                    {"title": "apiResponse", "success": False, "errors": str(e)},
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                )
+
         # Handle validation errors
-        return Response({"title": "apiResponse", "success": False, "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+        return Response(
+            {"title": "apiResponse", "success": False, "errors": serializer.errors},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+        
+        

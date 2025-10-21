@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from corsheaders.defaults import default_headers
 
 # Load environment variables from .env file
 load_dotenv()
@@ -61,6 +62,13 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",   # Vite default
     "http://127.0.0.1:5173",
 ]
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'x-frontend-key',
+]
+
+# Frontend Token
+FE_TOKEN = os.getenv('FE_TOKEN', 'dev-secret_23451@@@!!!!') 
 
 
 ROOT_URLCONF = 'lupus_backend.urls'
@@ -115,7 +123,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
