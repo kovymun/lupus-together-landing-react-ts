@@ -132,6 +132,16 @@ This section tracks backend tests as they are added. Each test includes a short 
 - To confirm that submitting a POST request with an email that already exists in the database returns a validation error and prevents duplicate entries.
 - **RESULT**: Passed
 
+Security Tests:
+
+**Frontend | Backend token handshake:**
+
+- Why is this useful? Protects the backend from unauthorized requests or bots, ensures only your frontend or trusted clients can submit data to sensitive endpoints, and adds a lightweight layer of security even without full user authentication.
+- To ensure that the shared secret token handshake works correctly.
+- Submissions with the **correct token** succeed.
+- Submissions with a **wrong or missing token** are rejected with a `401 Unauthorized` response.
+- **RESULT**: Passed
+
 ### Acknowledgment
 
 Inspired by a family member who battles Lupus daily. This project is a tribute to their strength, and to those navigating this journey around the world.
