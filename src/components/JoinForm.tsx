@@ -87,6 +87,7 @@ const JoinForm = () => {
         );
 
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+  const BE_API_KEY = import.meta.env.VITE_BKE_KEY;
 
   const reqJoinComm = async (data: JoinCommInputs) => {
     try {
@@ -105,11 +106,15 @@ const JoinForm = () => {
 
       const res = await fetch(`${API_BASE_URL}/api/community/`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "X-FRONTEND-KEY": BE_API_KEY,
+        },
         body: JSON.stringify(payload),
       });
 
       const json: Response = await res.json();
+      // console.log(res.status, json);
       const emailError: string | undefined = json?.errors?.email?.[0];
 
       if (res.ok && json.success) {

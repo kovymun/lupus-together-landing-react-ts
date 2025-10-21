@@ -32,6 +32,7 @@ This personal project combines thoughtful UI/UX with meaningful storytelling to 
 2. Fully responsive design for mobile, tablet, and desktop.
 3. Content-first layout designed to raise awareness and build community.
 4. Modern CSS techniques, including **Flexbox**, **Grid**, and `clamp()` for fluid typography.
+5. 5. **Secure POST requests** with a shared secret token handshake, between _frontend_ and _backend_, to prevent unauthorized submissions from bots or random clients. (Unauthorized submissions)
 
 ### Tech Stack
 
