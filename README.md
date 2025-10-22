@@ -10,6 +10,7 @@
 - [Installation Guide](#installation-guide)
 - [Usage Guide](#usage-guide)
 - [Screenshots](#screenshots)
+- [Security](#security)
 - [Testing](#testing)
 - [Acknowledgment](#acknowledgment)
 - [Notes](#notes)
@@ -32,7 +33,7 @@ This personal project combines thoughtful UI/UX with meaningful storytelling to 
 2. Fully responsive design for mobile, tablet, and desktop.
 3. Content-first layout designed to raise awareness and build community.
 4. Modern CSS techniques, including **Flexbox**, **Grid**, and `clamp()` for fluid typography.
-5. 5. **Secure POST requests** with a shared secret token handshake, between _frontend_ and _backend_, to prevent unauthorized submissions from bots or random clients. (Unauthorized submissions)
+5. **Secure POST requests** with a shared secret token handshake, between _frontend_ and _backend_, to prevent unauthorized submissions from bots or random clients. (Unauthorized submissions)
 
 ### Tech Stack
 
@@ -104,11 +105,13 @@ This website/landing page is structured into several key sections designed to gu
 <br/>
 <img width="405" height="373" alt="Image" src="https://github.com/user-attachments/assets/8c1d78f0-b7eb-4508-b6e3-cb1b2a102cc2" />
 
+### Security
+
 ### Testing
 
 #### Back-end testing (Django + Pytest)
 
-Integration tests:
+#### Integration tests:
 
 This section tracks backend tests as they are added. Each test includes a short reason and a status to keep things easy to follow.
 
@@ -132,7 +135,7 @@ This section tracks backend tests as they are added. Each test includes a short 
 - To confirm that submitting a POST request with an email that already exists in the database returns a validation error and prevents duplicate entries.
 - **RESULT**: Passed
 
-Security Tests:
+#### Security Tests:
 
 **Frontend | Backend token handshake:**
 
