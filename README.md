@@ -23,24 +23,24 @@
 
 Lupus Together is a front-end landing page built with care, empathy, and intention. Inspired by a loved one's journey with Lupus, this project serves as a heartfelt digital space for awareness, connection, and support.
 
-Built using React, TypeScript and Vanilla CSS, it follows landing page best practices, offering a clear, inviting, and emotionally resonant experience for those affected by Lupus.
+Built using React, TypeScript, and Vanilla CSS for the frontend, and Django with Django REST Framework for the backend, it follows landing page best practices while providing a secure, reliable, and scalable API. The backend handles data storage, input validation, and safe communication with the frontend, ensuring user submissions are processed correctly and securely.
 
 This personal project combines thoughtful UI/UX with meaningful storytelling to gently educate, uplift, and welcome future members into a compassionate community.
 
 ### Features
 
 1. Smooth, intuitive navigation using **React Scroll** for section-based browsing.
-2. Fully responsive design for mobile, tablet, and desktop.
+2. **Fully responsive design** for mobile, tablet, and desktop.
 3. Content-first layout designed to raise awareness and build community.
 4. Modern CSS techniques, including **Flexbox**, **Grid**, and `clamp()` for fluid typography.
 5. **Light and dark mode themes** that automatically adapt to the user’s system preference, improving accessibility and comfort.
-6. **Frontend–Backend input validation** ensuring all user-submitted data is sanitized and verified before reaching the database.
+6. **Form and input validation** with React Hook Form on the frontend and DRF serializers on the backend, ensuring all user-submitted data meets required criteria before reaching the database.
 7. **Secure POST requests** with a **shared secret token handshake** between the _frontend_ and _backend_, ensuring only trusted clients can submit data and preventing unauthorized or automated (bot) submissions.
 
 ### Tech Stack
 
 - **Front-end Framework:** React (structured using functional components)
-- **Backend Framework:** Django | Django REST Framework
+- **Backend Framework:** Django | Django REST Framework (DRF)
 - **Programming Language:** TypeScript (frontend) | Python (backend)
 - **Database:** PostgreSQL | SQLite (testing)
 - **Styling:** Vanilla CSS
@@ -50,6 +50,7 @@ This personal project combines thoughtful UI/UX with meaningful storytelling to 
 #### Additional Libraries:
 
 - **Google Fonts:** For typography that enhances readability and style.
+- **React Hook Form:** Simplifies form handling, validation, and error management in the React frontend.
 - **React Scroll:** Enables smooth in-page scroll behavior for a fluid user experience.
 - **React Icons:** Lightweight icon integration that elevates visual design.
 - **Fetch API:** Handles secure API requests, including the frontend-backend secret token handshake.
@@ -154,16 +155,6 @@ This section tracks backend tests as they are added. Each test includes a short 
 - **RESULT**: Passed
 
 #### Security Tests:
-
-**Frontend | Backend token handshake:**
-
-- Why is this useful? Protects the backend from unauthorized requests or bots, ensures only your frontend or trusted clients can submit data to sensitive endpoints, and adds a lightweight layer of security even without full user authentication.
-- To ensure that the shared secret token handshake works correctly.
-- Submissions with the **correct token** succeed.
-- Submissions with a **wrong or missing token** are rejected with a `401 Unauthorized` response.
-- **RESULT**: Passed
-
-#### Security Tests
 
 | Test Name                                          | Description                                                                                                                   | Why It’s Useful                                                                                                                                                                                                                | Result     |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
