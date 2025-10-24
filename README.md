@@ -19,6 +19,8 @@
 - [Credits](#credits)
 - [Contact](#contact)
 
+---
+
 ### Description and Purpose
 
 Lupus Together is a front-end landing page built with care, empathy, and intention. Inspired by a loved one's journey with Lupus, this project serves as a heartfelt digital space for awareness, connection, and support.
@@ -26,6 +28,8 @@ Lupus Together is a front-end landing page built with care, empathy, and intenti
 Built using React, TypeScript, and Vanilla CSS for the frontend, and Django with Django REST Framework for the backend, it follows landing page best practices while providing a secure, reliable, and scalable API. The backend handles data storage, input validation, and safe communication with the frontend, ensuring user submissions are processed correctly and securely.
 
 This personal project combines thoughtful UI/UX with meaningful storytelling to gently educate, uplift, and welcome future members into a compassionate community.
+
+---
 
 ### Features
 
@@ -37,25 +41,30 @@ This personal project combines thoughtful UI/UX with meaningful storytelling to 
 6. **Form and input validation** with React Hook Form on the frontend and DRF serializers on the backend, ensuring all user-submitted data meets required criteria before reaching the database.
 7. **Secure POST requests** with a **shared secret token handshake** between the _frontend_ and _backend_, ensuring only trusted clients can submit data and preventing unauthorized or automated (bot) submissions.
 
+---
+
 ### Tech Stack
 
-- **Front-end Framework:** React (structured using functional components)
-- **Backend Framework:** Django | Django REST Framework (DRF)
-- **Programming Language:** TypeScript (frontend) | Python (backend)
-- **Database:** PostgreSQL | SQLite (testing)
-- **Styling:** Vanilla CSS
-- **Animations:** CSS Transitions
-- **Build Tool:** Frontend: Vite (for scaffolding and fast development)
+1. **Front-end Framework:** React (structured using functional components)
+2. **Backend Framework:** Django | Django REST Framework (DRF)
+3. **Programming Language:** TypeScript (frontend) | Python (backend)
+4. **Database:** PostgreSQL | SQLite (testing)
+5. **Styling:** Vanilla CSS
+6. **Animations:** CSS Transitions
+7. **Build Tool:** Frontend: Vite (for scaffolding and fast development)
+
+---
 
 #### Additional Libraries:
 
-- **Google Fonts:** For typography that enhances readability and style.
-- **React Hook Form:** Simplifies form handling, validation, and error management in the React frontend.
-- **React Scroll:** Enables smooth in-page scroll behavior for a fluid user experience.
-- **React Icons:** Lightweight icon integration that elevates visual design.
-- **Fetch API:** Handles secure API requests, including the frontend-backend secret token handshake.
-- **Testing Utilities:**
-  - Backend: `pytest`, `pytest-django`, `coverage` for testing and coverage analysis.
+1. **Google Fonts:** For typography that enhances readability and style.
+2. **React Hook Form:** Simplifies form handling, validation, and error management in the React frontend.
+3. **React Scroll:** Enables smooth in-page scroll behavior for a fluid user experience.
+4. **React Icons:** Lightweight icon integration that elevates visual design.
+5. **Fetch API:** Handles secure API requests, including the frontend-backend secret token handshake.
+6. **Testing Utilities:** Backend: `pytest`, `pytest-django`, `coverage` for testing and coverage analysis.
+
+---
 
 ### Installation Guide
 
@@ -99,6 +108,8 @@ This website/landing page is structured into several key sections designed to gu
 7. **Meet the Team:** Discover the faces behind the platform, the people dedicated to fostering support.
 8. **Join the Community:** Fill out the form to express interest in becoming part of the Lupus Together support circle.
 
+---
+
 ### Screenshots
 
 <img width="790" height="349" alt="Lupus Together Hero section" src="https://github.com/user-attachments/assets/05e3200e-2292-46a8-8406-d82d31184281" />
@@ -113,6 +124,8 @@ This website/landing page is structured into several key sections designed to gu
 <br/>
 <img width="405" height="373" alt="Image" src="https://github.com/user-attachments/assets/8c1d78f0-b7eb-4508-b6e3-cb1b2a102cc2" />
 
+---
+
 ### Security
 
 #### Backend Security Measures
@@ -124,8 +137,6 @@ This website/landing page is structured into several key sections designed to gu
 | **CSRF & CORS Middleware**               | Default Django middleware enabled.                                                            | Restricts cross-origin and CSRF attacks.                  |
 | **Environment Variables**                | Secrets and credentials stored in `.env`.                                                     | Protects sensitive information from exposure.             |
 
-markdown table here in this table there should be what was implemented and why it was implemented?
-
 ### Testing
 
 #### Back-end testing (Django + Pytest)
@@ -134,39 +145,34 @@ markdown table here in this table there should be what was implemented and why i
 
 This section tracks backend tests as they are added. Each test includes a short reason and a status to keep things easy to follow.
 
-1. **Model test:**
+### Backend Testing Summary
 
-- To confirm that the CommunityMember model can be created, behaves as expected, and that user details are saved to the database correctly.
-- **RESULT:** Passed
-
-2. **Serializer validation tests:**
-
-- To ensure that the _CommunityMemberSerializer_ correctly validates input data, enforcing required fields and field constraints. Includes checks for missing fields such as _first_name_ or _last_name_.
-- **RESULT:** Passed
-
-3. **Views test:**
-
-- To confirm the `/community/` endpoint correctly handles GET and POST requests with both valid and invalid data.
-- **RESULT**: Passed
-
-4. POST req endpoint test: duplicate email
-
-- To confirm that submitting a POST request with an email that already exists in the database returns a validation error and prevents duplicate entries.
-- **RESULT**: Passed
+| Test Type                         | Description                                                                                                                                                                            | Result |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Model test                        | Confirms that the CommunityMember model can be created, behaves as expected, and that user details are saved to the database correctly.                                                | PASSED |
+| Serializer validation tests       | Ensures that the CommunityMemberSerializer correctly validates input data, enforcing required fields and constraints. Includes checks for missing fields like first_name or last_name. | PASSED |
+| Views test                        | Confirms that the `/community/` endpoint correctly handles GET and POST requests with both valid and invalid data.                                                                     | PASSED |
+| POST request duplicate email test | Verifies that submitting a POST request with an email that already exists in the database returns a validation error and prevents duplicate entries.                                   | PASSED |
 
 #### Security Tests:
 
-| Test Name                                          | Description                                                                                                                   | Why It’s Useful                                                                                                                                                                                                                | Result     |
-| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
-| **Frontend–Backend Shared Secret Token Handshake** | Verified that requests with the correct shared secret token succeed, and invalid or missing tokens return `401 Unauthorized`. | Protects the backend from unauthorized requests or bots, ensures only your frontend or trusted clients can submit data to sensitive endpoints, and adds a lightweight layer of security even without full user authentication. | **PASSED** |
+| Test Name                                          | Description                                                                                                                   | Why It’s Useful                                                                                                                                                                                                                | Result |
+| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| **Frontend–Backend Shared Secret Token Handshake** | Verified that requests with the correct shared secret token succeed, and invalid or missing tokens return `401 Unauthorized`. | Protects the backend from unauthorized requests or bots, ensures only your frontend or trusted clients can submit data to sensitive endpoints, and adds a lightweight layer of security even without full user authentication. | PASSED |
+
+---
 
 ### Acknowledgment
 
 Inspired by a family member who battles Lupus daily. This project is a tribute to their strength, and to those navigating this journey around the world.
 
+---
+
 ### Notes
 
 This project reflects a passion for building applications that are not only technically sound but also emotionally intelligent. The focus is on creating a welcoming space for users through accessible design, inclusive language, and meaningful visuals.
+
+---
 
 ### Disclaimer
 
@@ -174,18 +180,24 @@ All names, services, testimonials, locations, and brand references, including _L
 
 Images used are royalty-free and sourced from **[Unsplash](https://unsplash.com/)** and **[Lummi AI](https://www.lummi.ai/)** , optimized for performance (WebP format). Social links included are placeholders to demonstrate UI layout and design.
 
+---
+
 ### Future Plans
 
 - **Migrate to Astro.js**: for improved app performance and enhanced SEO/GEO capabilities.
-- **Light & Dark Theme Toggle**: to improve accessibility and user preference support.
+- **Light & Dark Theme Toggle**: to improve accessibility and user preference support. STATUS: IMPLEMENTED.
 - **Scroll-triggered Animations**: for a smoother, more interactive visual experience.
 - **Deploy to Production**: make the project live and accessible to users.
 - **Backend**: Integrate Django Backend.
+
+---
 
 ### Credits
 
 - **Sole Developer & Designer:** Koveshan Munsami
 - **Inspiration:** A family member who lives with Lupus daily. This is for them, and for all who need a gentle place to land.
+
+---
 
 ### Contact
 
