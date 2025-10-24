@@ -107,6 +107,17 @@ This website/landing page is structured into several key sections designed to gu
 
 ### Security
 
+#### Backend Security Measures
+
+| Security Feature                         | Description                                                                                   | Why                                                       |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| **Frontend–Backend Shared Secret Token** | The frontend includes a secret key stored in `.env`. The backend verifies it on each request. | Ensures only trusted frontend clients can access the API. |
+| **Serializer Validation**                | All data passes through DRF serializers before saving.                                        | Prevents malformed or malicious data.                     |
+| **CSRF & CORS Middleware**               | Default Django middleware enabled.                                                            | Restricts cross-origin and CSRF attacks.                  |
+| **Environment Variables**                | Secrets and credentials stored in `.env`.                                                     | Protects sensitive information from exposure.             |
+
+markdown table here in this table there should be what was implemented and why it was implemented?
+
 ### Testing
 
 #### Back-end testing (Django + Pytest)
@@ -144,6 +155,12 @@ This section tracks backend tests as they are added. Each test includes a short 
 - Submissions with the **correct token** succeed.
 - Submissions with a **wrong or missing token** are rejected with a `401 Unauthorized` response.
 - **RESULT**: Passed
+
+#### Security Tests
+
+| Test Name                                          | Description                                                                                                                   | Why It’s Useful                                                                                                                                                                                                                | Result     |
+| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
+| **Frontend–Backend Shared Secret Token Handshake** | Verified that requests with the correct shared secret token succeed, and invalid or missing tokens return `401 Unauthorized`. | Protects the backend from unauthorized requests or bots, ensures only your frontend or trusted clients can submit data to sensitive endpoints, and adds a lightweight layer of security even without full user authentication. | **PASSED** |
 
 ### Acknowledgment
 
