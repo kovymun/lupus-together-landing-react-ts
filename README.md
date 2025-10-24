@@ -33,21 +33,28 @@ This personal project combines thoughtful UI/UX with meaningful storytelling to 
 2. Fully responsive design for mobile, tablet, and desktop.
 3. Content-first layout designed to raise awareness and build community.
 4. Modern CSS techniques, including **Flexbox**, **Grid**, and `clamp()` for fluid typography.
-5. **Secure POST requests** with a shared secret token handshake, between _frontend_ and _backend_, to prevent unauthorized submissions from bots or random clients. (Unauthorized submissions)
+5. **Light and dark mode themes** that automatically adapt to the user’s system preference, improving accessibility and comfort.
+6. **Frontend–Backend input validation** ensuring all user-submitted data is sanitized and verified before reaching the database.
+7. **Secure POST requests** with a **shared secret token handshake** between the _frontend_ and _backend_, ensuring only trusted clients can submit data and preventing unauthorized or automated (bot) submissions.
 
 ### Tech Stack
 
 - **Front-end Framework:** React (structured using functional components)
-- **Programming Language:** TypeScript
+- **Backend Framework:** Django | Django REST Framework
+- **Programming Language:** TypeScript (frontend) | Python (backend)
+- **Database:** PostgreSQL | SQLite (testing)
 - **Styling:** Vanilla CSS
 - **Animations:** CSS Transitions
-- **Build Tool:** Vite (for scaffolding and fast development)
+- **Build Tool:** Frontend: Vite (for scaffolding and fast development)
 
 #### Additional Libraries:
 
 - **Google Fonts:** For typography that enhances readability and style.
 - **React Scroll:** Enables smooth in-page scroll behavior for a fluid user experience.
 - **React Icons:** Lightweight icon integration that elevates visual design.
+- **Fetch API:** Handles secure API requests, including the frontend-backend secret token handshake.
+- **Testing Utilities:**
+  - Backend: `pytest`, `pytest-django`, `coverage` for testing and coverage analysis.
 
 ### Installation Guide
 
