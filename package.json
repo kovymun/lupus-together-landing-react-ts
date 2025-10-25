@@ -6,7 +6,7 @@
   "scripts": {
     "start": "concurrently \"npm run dev\" \"npm run django-backend\"",
     "dev": "vite",
-    "django-backend": "cd backend && venv\\Scripts\\python.exe manage.py runserver",
+    "django-backend": "cd backend && docker-compose up",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

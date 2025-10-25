@@ -100,7 +100,7 @@ DATABASES = {
         'NAME': os.getenv('DB_NAME'),
         'USER': os.getenv('DB_USER'),
         'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': 'localhost',  # local setup for development
+        'HOST': 'db', # Docker service name for the database
         'PORT': '5432',  # Default PostgreSQL port
     }
 }
