@@ -13,6 +13,8 @@
   --text-color: #333333;
   --muted-text-color: #777777;
 
+  --story-text: #666666;
+
   --primary-font-family: "Quicksand", sans-serif;
   --secondary-font-family: "Playfair Display", Georgia;
 }
@@ -33,6 +35,8 @@
     --muted-text-color: #9a9a9a;
 
     --input-border: #555;
+
+    --story-text: #bfbfbf;
   }
 }
 
