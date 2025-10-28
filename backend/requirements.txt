@@ -11,10 +11,12 @@ Django==5.2.7
 django-cors-headers==4.9.0
 djangorestframework==3.16.1
 filelock==3.20.0
+flake8==7.3.0
 idna==3.11
 iniconfig==2.1.0
 license-expression==30.4.4
 markdown-it-py==4.0.0
+mccabe==0.7.0
 mdurl==0.1.2
 msgpack==1.1.2
 packageurl-python==0.17.5
@@ -26,6 +28,8 @@ platformdirs==4.5.0
 pluggy==1.6.0
 psycopg2-binary==2.9.10
 py-serializable==2.1.0
+pycodestyle==2.14.0
+pyflakes==3.4.0
 Pygments==2.19.2
 pyparsing==3.2.5
 pytest==8.4.2
