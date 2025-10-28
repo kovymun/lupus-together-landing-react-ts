@@ -55,7 +55,7 @@ const Members = () => {
                 },
                 index
               ) => {
-                const isExpanded = expandedCards[id];
+                const isExpanded = expandedCards[id] || false;
                 return (
                   <div className="member-card" key={id}>
                     <img
@@ -77,7 +77,11 @@ const Members = () => {
                       <p className="member-role">{role}</p>
                       <p className="member-bio">{bio}</p>
                       {isExpanded && (
-                        <div>
+                        <div
+                          id={`details-${id}`}
+                          hidden={!isExpanded}
+                          aria-hidden={!isExpanded}
+                        >
                           <blockquote className="member-message">
                             <FaQuoteLeft
                               style={{

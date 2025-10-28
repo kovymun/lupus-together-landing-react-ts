@@ -49,11 +49,11 @@ const Navbar = () => {
         className="brand-logo"
       >
         <div className="logo-container nav-logo">
-          <FaHeart size={20} />
+          <FaHeart size={20} aria-hidden="true" />
           <span className="navbar-brand">Lupus Together</span>
         </div>
         <div className="logo-container nav-home">
-          <FaHome size={24} />
+          <FaHome size={24} aria-hidden="true" />
           <span className="navbar-brand">Home</span>
         </div>
       </Link>
@@ -132,7 +132,11 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger Menu - visible only on mobile */}
-      <button className="navbar-toggle" onClick={handleNavToggle}>
+      <button
+        className="navbar-toggle"
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        onClick={handleNavToggle}
+      >
         {isMenuOpen ? <FaTimesCircle size={24} /> : <FaBars size={24} />}
       </button>
 

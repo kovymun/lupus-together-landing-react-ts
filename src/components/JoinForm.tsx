@@ -153,7 +153,11 @@ const JoinForm = () => {
           </div>
           <div className="container">
             {" "}
-            <form className="join-form" onSubmit={handleSubmit(reqJoinComm)}>
+            <form
+              className="join-form"
+              onSubmit={handleSubmit(reqJoinComm)}
+              aria-busy={isSubmitting}
+            >
               {/* First Name */}
               <div className="input-container">
                 <label htmlFor="firstName">First Name</label>
@@ -294,6 +298,7 @@ const JoinForm = () => {
 
               <button
                 type="submit"
+                aria-live="polite"
                 className="site-btn join-form-btn"
                 disabled={isSubmitting}
               >
