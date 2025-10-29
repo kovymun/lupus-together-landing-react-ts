@@ -1,6 +1,6 @@
 ## Lupus Together Community Website: React, TypeScript Frontend + Python Django Backend
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3) ![React Scroll](https://img.shields.io/badge/React--Scroll-61DAFB?style=for-the-badge) ![React Icons](https://img.shields.io/badge/React--Icons-000000?style=for-the-badge) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3) ![React Scroll](https://img.shields.io/badge/React--Scroll-61DAFB?style=for-the-badge) ![React Icons](https://img.shields.io/badge/React--Icons-000000?style=for-the-badge) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Axe DevTools](https://img.shields.io/badge/Axe%20DevTools-663399?style=for-the-badge&logo=axe&logoColor=white) ![Google Lighthouse](https://img.shields.io/badge/Google%20Lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=white)
 
 ### Table of Contents
 
@@ -38,8 +38,9 @@ This personal project combines thoughtful UI/UX with meaningful storytelling to 
 3. Content-first layout designed to raise awareness and build community.
 4. Modern CSS techniques, including **Flexbox**, **Grid**, and `clamp()` for fluid typography.
 5. **Light and dark mode themes** that automatically adapt to the user’s system preference, improving accessibility and comfort.
-6. **Form and input validation** with React Hook Form on the frontend and DRF serializers on the backend, ensuring all user-submitted data meets required criteria before reaching the database.
-7. **Secure POST requests** with a **shared secret token handshake** between the _frontend_ and _backend_, ensuring only trusted clients can submit data and preventing unauthorized or automated (bot) submissions.
+6. **Accessibility First Design:** Fully aligned with **WCAG 2.1 AA** standards for inclusive, user friendly, and SEO optimized experiences.
+7. **Form and input validation** with React Hook Form on the frontend and DRF serializers on the backend, ensuring all user-submitted data meets required criteria before reaching the database.
+8. **Secure POST requests** with a **shared secret token handshake** between the _frontend_ and _backend_, ensuring only trusted clients can submit data and preventing unauthorized or automated (bot) submissions.
 
 ---
 
@@ -55,7 +56,7 @@ This personal project combines thoughtful UI/UX with meaningful storytelling to 
 
 ---
 
-#### Additional Libraries:
+#### Additional Libraries and Tools:
 
 1. **Google Fonts:** For typography that enhances readability and style.
 2. **React Hook Form:** Simplifies form handling, validation, and error management in the React frontend.
@@ -63,6 +64,8 @@ This personal project combines thoughtful UI/UX with meaningful storytelling to 
 4. **React Icons:** Lightweight icon integration that elevates visual design.
 5. **Fetch API:** Handles secure API requests, including the frontend-backend secret token handshake.
 6. **Testing Utilities:** Backend: `pytest`, `pytest-django`, `coverage` for testing and coverage analysis.
+7. **Google Lighthouse:** For automated web accessibility, performance, SEO, and best practices auditing.
+8. **Axe DevTools:** In-depth accessibility testing and validation for compliance with WCAG standards.
 
 ---
 
@@ -137,15 +140,26 @@ This website/landing page is structured into several key sections designed to gu
 | **CSRF & CORS Middleware**               | Default Django middleware enabled.                                                            | Restricts cross-origin and CSRF attacks.                  |
 | **Environment Variables**                | Secrets and credentials stored in `.env`.                                                     | Protects sensitive information from exposure.             |
 
+---
+
 ### Testing
+
+#### Front-end testing
+
+All core features and UI components have been thoroughly tested for reliability, accessibility, and responsiveness.
+
+##### Accessibility Audit
+
+- **Purpose:** To enhance inclusivity and usability for all users, ensuring the application is accessible to those using assistive technologies and compliant with **WCAG 2.1 AA** standards.
+- **Summary:** Conducted a complete accessibility audit using **Axe DevTools** and **Google Lighthouse**. Key improvements included proper ARIA usage, improved keyboard navigation, better color contrast, and semantic HTML structure across all interactive components.
+- **Tools Used:** **Google Lighthouse** (Web Accessibility Audit) and **Axe DevTools** (In-depth Element Level Testing).
+- **Results:** The accessibility score improved from **83% to 100%**, ensuring compliance with modern accessibility standards and a more inclusive user experience.
 
 #### Back-end testing (Django + Pytest)
 
-#### Integration tests:
+##### Integration tests:
 
 This section tracks backend tests as they are added. Each test includes a short reason and a status to keep things easy to follow.
-
-### Backend Testing Summary
 
 | Test Type                         | Description                                                                                                                                                                            | Result |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -154,7 +168,7 @@ This section tracks backend tests as they are added. Each test includes a short 
 | Views test                        | Confirms that the `/community/` endpoint correctly handles GET and POST requests with both valid and invalid data.                                                                     | PASSED |
 | POST request duplicate email test | Verifies that submitting a POST request with an email that already exists in the database returns a validation error and prevents duplicate entries.                                   | PASSED |
 
-#### Security Tests:
+##### Security Tests:
 
 | Test Name                                          | Description                                                                                                                   | Why It’s Useful                                                                                                                                                                                                                | Result |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
