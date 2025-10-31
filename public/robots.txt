@@ -1,0 +1,10 @@
+# Allow all crawlers to index the site
+User-agent: *
+Allow: /
+
+# Future-proof: Prevent indexing of sensitive pages (if any)
+Disallow: /admin/
+Disallow: /login/
+
+# Link to sitemap (to be added later)
+Sitemap: https://domain.com/sitemap.xml
