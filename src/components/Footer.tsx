@@ -12,7 +12,7 @@ import "../styles/footer.css";
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div className="footer-container">
         <div className="footer-brand">
           <Link
@@ -20,6 +20,8 @@ const Footer = () => {
             spy={true}
             smooth={true}
             duration={900}
+            href="#hero"
+            aria-label="Scroll to Home section"
             className="home-route"
           >
             <h2 className="footer-logo">
@@ -43,6 +45,8 @@ const Footer = () => {
                 smooth={true}
                 offset={-80}
                 duration={900}
+                href="#about"
+                aria-label="Scroll to About section"
               >
                 About
               </Link>

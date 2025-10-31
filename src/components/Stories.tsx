@@ -6,7 +6,7 @@ import "../styles/stories.css";
 const Stories = () => {
   return (
     <Element name="stories">
-      <section className="stories-section">
+      <section className="stories-section" id="stories">
         <div className="section-wrapper">
           <div className="section-header">
             <h2 className="section-title">
