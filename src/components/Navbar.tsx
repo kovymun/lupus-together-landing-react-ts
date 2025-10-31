@@ -47,6 +47,7 @@ const Navbar = () => {
     >
       <Link
         to="home"
+        data-cy-link-id="nav-home"
         spy={true}
         smooth={true}
         offset={-80}
@@ -69,6 +70,7 @@ const Navbar = () => {
         <li>
           <Link
             to="about"
+            data-cy-link-id="nav-about"
             spy={true}
             smooth={true}
             offset={-90}
@@ -84,6 +86,7 @@ const Navbar = () => {
         <li>
           <Link
             to="lupus"
+            data-cy-link-id="nav-lupus"
             spy={true}
             smooth={true}
             offset={-90}
@@ -99,6 +102,7 @@ const Navbar = () => {
         <li>
           <Link
             to="stories"
+            data-cy-link-id="nav-stories"
             spy={true}
             smooth={true}
             offset={-90}
@@ -114,6 +118,7 @@ const Navbar = () => {
         <li>
           <Link
             to="members"
+            data-cy-link-id="nav-members"
             spy={true}
             smooth={true}
             offset={-90}
@@ -129,6 +134,7 @@ const Navbar = () => {
         <li>
           <Link
             to="join"
+            data-cy-link-id="nav-join"
             spy={true}
             smooth={true}
             offset={-90}
