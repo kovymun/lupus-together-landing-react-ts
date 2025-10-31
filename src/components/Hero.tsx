@@ -20,6 +20,8 @@ const Hero = () => {
               smooth={true}
               offset={-80}
               duration={900}
+              href="#join"
+              aria-label="Scroll to Join Lupus Together section"
               className="site-btn"
             >
               Join Our Community!

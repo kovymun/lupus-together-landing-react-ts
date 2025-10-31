@@ -39,13 +39,20 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="navbar" ref={navRef}>
+    <nav
+      className="navbar"
+      ref={navRef}
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <Link
         to="home"
         spy={true}
         smooth={true}
         offset={-80}
         duration={700}
+        href="#hero"
+        aria-label="Scroll to Home section"
         className="brand-logo"
       >
         <div className="logo-container nav-logo">
@@ -66,6 +73,8 @@ const Navbar = () => {
             smooth={true}
             offset={-90}
             duration={700}
+            href="#about"
+            aria-label="Scroll to About section"
             activeClass="active"
             onClick={handleLinkSelect}
           >
@@ -79,6 +88,8 @@ const Navbar = () => {
             smooth={true}
             offset={-90}
             duration={700}
+            href="#lupus"
+            aria-label="Scroll to Understanding Lupus section"
             activeClass="active"
             onClick={handleLinkSelect}
           >
@@ -92,6 +103,8 @@ const Navbar = () => {
             smooth={true}
             offset={-90}
             duration={700}
+            href="#stories"
+            aria-label="Scroll to Stories section"
             activeClass="active"
             onClick={handleLinkSelect}
           >
@@ -105,6 +118,8 @@ const Navbar = () => {
             smooth={true}
             offset={-90}
             duration={700}
+            href="#members"
+            aria-label="Scroll to Meet the Team section"
             activeClass="active"
             onClick={handleLinkSelect}
           >
@@ -118,6 +133,8 @@ const Navbar = () => {
             smooth={true}
             offset={-90}
             duration={700}
+            href="#join"
+            aria-label="Scroll to Join Lupus Together section"
             activeClass="active"
             onClick={handleLinkSelect}
           >

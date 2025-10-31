@@ -6,7 +6,7 @@ import doctor from "../assets/doctor.webp";
 const UnderstandingLupus = () => {
   return (
     <Element name="lupus">
-      <section className="understanding-lupus-section">
+      <section className="understanding-lupus-section" id="lupus">
         <div className="section-wrapper">
           <div className="section-header">
             <h2 className="section-title">Understanding Lupus</h2>

@@ -8,7 +8,11 @@ import community from "../assets/community.webp";
 const About = () => {
   return (
     <Element name="about">
-      <section className="about-section" aria-label="About Lupus Together">
+      <section
+        className="about-section"
+        id="about"
+        aria-label="About Lupus Together"
+      >
         <div className="section-wrapper">
           <div className="section-header">
             <h2 className="section-title">About Lupus Together</h2>

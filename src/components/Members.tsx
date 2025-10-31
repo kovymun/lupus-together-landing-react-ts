@@ -24,7 +24,7 @@ const Members = () => {
 
   return (
     <Element name="members">
-      <section className="members-section">
+      <section className="members-section" id="members">
         <div className="section-wrapper">
           <div className="section-header">
             <h2 className="section-title">
