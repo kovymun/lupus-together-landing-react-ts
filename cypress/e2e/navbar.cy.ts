@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 // We are testing this to ensure that navbar links reliably scroll users to the correct sections with smooth-scroll functionality, behave consistently across all devices, and prevent regressions.
 
 describe("Navbar scroll functionality across all viewports", () => {
