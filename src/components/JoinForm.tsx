@@ -164,6 +164,7 @@ const JoinForm = () => {
                 <input
                   type="text"
                   id="firstName"
+                  data-cy="join-first-name"
                   {...register("firstName", {
                     required: {
                       value: true,
@@ -186,6 +187,7 @@ const JoinForm = () => {
                 <input
                   type="text"
                   id="lastName"
+                  data-cy="join-last-name"
                   {...register("lastName", {
                     required: {
                       value: true,
@@ -208,6 +210,7 @@ const JoinForm = () => {
                 <input
                   type="email"
                   id="email"
+                  data-cy="join-email"
                   {...register("email", {
                     required: {
                       value: true,
@@ -232,6 +235,7 @@ const JoinForm = () => {
                   type="tel"
                   id="phone"
                   maxLength={10}
+                  data-cy="join-phone"
                   {...register("phone", {
                     required: {
                       value: true,
@@ -259,6 +263,7 @@ const JoinForm = () => {
                 <textarea
                   id="message"
                   rows={5}
+                  data-cy="join-message"
                   {...register("message", {
                     validate: (value: string | undefined): true | string =>
                       !value ||
@@ -283,6 +288,7 @@ const JoinForm = () => {
                   <input
                     type="checkbox"
                     id="consent"
+                    data-cy="join-consent"
                     {...register("consent", {
                       required: "You must agree before continuing",
                     })}
@@ -300,6 +306,7 @@ const JoinForm = () => {
                 type="submit"
                 aria-live="polite"
                 className="site-btn join-form-btn"
+                data-cy="join-submit-btn"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Submitting..." : "Join our Community"}
