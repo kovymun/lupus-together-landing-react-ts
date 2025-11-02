@@ -18,7 +18,7 @@ const Hero = () => {
               to="join"
               spy={true}
               smooth={true}
-              offset={-80}
+              offset={-90}
               duration={900}
               href="#join"
               aria-label="Scroll to Join Lupus Together section"
