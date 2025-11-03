@@ -1,6 +1,6 @@
 ## Lupus Together Community Website: React, TypeScript Frontend + Python Django Backend
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3) ![React Scroll](https://img.shields.io/badge/React--Scroll-61DAFB?style=for-the-badge) ![React Icons](https://img.shields.io/badge/React--Icons-000000?style=for-the-badge) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Axe DevTools](https://img.shields.io/badge/Axe%20DevTools-663399?style=for-the-badge&logo=axe&logoColor=white) ![Google Lighthouse](https://img.shields.io/badge/Google%20Lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=white) ![Cypress](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white) ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3) ![React Scroll](https://img.shields.io/badge/React--Scroll-61DAFB?style=for-the-badge) ![React Icons](https://img.shields.io/badge/React--Icons-000000?style=for-the-badge) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Axe DevTools](https://img.shields.io/badge/Axe%20DevTools-663399?style=for-the-badge&logo=axe&logoColor=white) ![Google Lighthouse](https://img.shields.io/badge/Google%20Lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=white) ![Cypress](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
 
 ### Table of Contents
 
@@ -148,25 +148,38 @@ This website/landing page is structured into several key sections designed to gu
 
 All core features and UI components have been thoroughly tested for reliability, accessibility, and responsiveness.
 
-##### Accessibility Audit
+#### Accessibility Audit
 
 - **Purpose:** To enhance inclusivity and usability for all users, ensuring the application is accessible to those using assistive technologies and compliant with **WCAG 2.1 AA** standards.
 - **Summary:** Conducted a complete accessibility audit using **Axe DevTools** and **Google Lighthouse**. Key improvements included proper ARIA usage, improved keyboard navigation, better color contrast, and semantic HTML structure across all interactive components.
 - **Tools Used:** **Google Lighthouse** (Web Accessibility Audit) and **Axe DevTools** (In-depth Element Level Testing).
 - **Results:** The accessibility score improved from **83% to 100%**, ensuring compliance with modern accessibility standards and a more inclusive user experience.
 
-##### E2E Testing (Cypress):
+#### E2E and QA Testing(Cypress):
 
 1. **Navbar Scroll functionality:** We implemented an end-to-end test using Cypress to verify the Navbar's scroll behavior:
 
 - Ensures each navigation link scrolls the user to the correct section.
 - Handles mobile view by opening the hamburger menu automatically.
-- Tested across multiple viewports: _desktop, tablet, and mobile_.
+- Tested across multiple viewports: _desktop and tablet_.
 - Validates smooth scroll and section visibility for a reliable user experience.
+
+2. **Hero CTA Interaction:**
+
+- TEST: Hero CTA scroll behavior
+- Purpose: Ensure that clicking the Hero "Join Our Community!" CTA scrolls smoothly to the Join section.
+
+3. **Join Form Validation & Submission:**
+
+- Checks inline validation messages for all required fields (first name, last name, email, phone, consent checkbox).
+- Validates error handling for invalid inputs.
+- Tests successful form submission with valid data and confirms form reset afterward.
+- Ensures that duplicate emails trigger the correct error toast and prevent multiple entries.
+- Confirms that the _frontend-backend shared secret token handshake_ works as expected during submission.
 
 #### Back-end testing (Django + Pytest)
 
-##### Integration tests:
+#### Integration tests:
 
 This section tracks backend tests as they are added. Each test includes a short reason and a status to keep things easy to follow.
 
@@ -177,7 +190,7 @@ This section tracks backend tests as they are added. Each test includes a short 
 | Views test                        | Confirms that the `/community/` endpoint correctly handles GET and POST requests with both valid and invalid data.                                                                     | PASSED |
 | POST request duplicate email test | Verifies that submitting a POST request with an email that already exists in the database returns a validation error and prevents duplicate entries.                                   | PASSED |
 
-##### Security Tests:
+#### Security Tests:
 
 | Test Name                                          | Description                                                                                                                   | Why It’s Useful                                                                                                                                                                                                                | Result |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
@@ -208,10 +221,8 @@ Images used are royalty-free and sourced from **[Unsplash](https://unsplash.com/
 ### Future Plans
 
 - **Migrate to Astro.js**: for improved app performance and enhanced SEO/GEO capabilities.
-- **Light & Dark Theme Toggle**: to improve accessibility and user preference support. STATUS: IMPLEMENTED.
 - **Scroll-triggered Animations**: for a smoother, more interactive visual experience.
 - **Deploy to Production**: make the project live and accessible to users.
-- **Backend**: Integrate Django Backend.
 
 ---
 
