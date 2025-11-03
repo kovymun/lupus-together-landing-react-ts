@@ -140,7 +140,7 @@ const JoinForm = () => {
 
   return (
     <Element name="join">
-      <section id="join" className="join-section">
+      <section id="join" className="join-section" data-cy="join-section">
         <div className="section-wrapper">
           {" "}
           <div className="section-header">
@@ -157,6 +157,7 @@ const JoinForm = () => {
               className="join-form"
               onSubmit={handleSubmit(reqJoinComm)}
               aria-busy={isSubmitting}
+              data-cy="join-form"
             >
               {/* First Name */}
               <div className="input-container">
