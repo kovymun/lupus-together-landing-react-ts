@@ -8,5 +8,6 @@
   "compilerOptions": {
     "types": ["cypress"]
   },
-  "include": ["cypress/**/*.ts"]
+  "include": ["cypress/**/*.ts"],
+  "exclude": ["cypress/**/*.d.ts"]
 }
