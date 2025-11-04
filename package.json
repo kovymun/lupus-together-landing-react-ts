@@ -13,6 +13,9 @@
     "check:types": "tsc --noEmit",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "dependencies": {
     "concurrently": "^9.2.1",
     "react": "^19.1.0",
