@@ -29,9 +29,9 @@
   transition: opacity 300ms ease;
 }
 
-.brand-logo:hover .nav-logo {
+/* .brand-logo:hover .nav-logo {
   opacity: 0;
-}
+} */
 
 .brand-logo .nav-home {
   position: absolute;
@@ -43,10 +43,10 @@
   transition: opacity 300ms ease;
 }
 
-.brand-logo:hover .nav-home {
+/* .brand-logo:hover .nav-home {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-}
+} */
 
 .logo-container {
   display: flex;
@@ -242,6 +242,18 @@
 }
 
 /* Larger screen styling */
+
+/* Hover effect only for large screens */
+@media (min-width: 1024px) {
+  .brand-logo:hover .nav-logo {
+    opacity: 0;
+  }
+
+  .brand-logo:hover .nav-home {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
 
 /* Light mode (1100px+) */
 @media screen and (min-width: 1100px) and (prefers-color-scheme: light) {
