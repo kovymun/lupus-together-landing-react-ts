@@ -13,27 +13,75 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import secrets
 from corsheaders.defaults import default_headers
 
 # Load environment variables from .env file
 load_dotenv()
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# ------------------------------------------------------------
+# Determine Environment (dev or prod)
+# ------------------------------------------------------------
+ENVIRONMENT = os.getenv('DJANGO_ENV', 'dev').lower() 
+IS_PROD = ENVIRONMENT == "prod"
+IS_DEV = ENVIRONMENT == "dev"
+
+# ------------------------------------------------------------
+# BASE DIR
+# ------------------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
+# ------------------------------------------------------------
+# SECRET KEY
+# ------------------------------------------------------------
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+if not SECRET_KEY:
+    SECRET_KEY = secrets.token_urlsafe(50)
+    
+# ------------------------------------------------------------
+# DEBUG
+# ------------------------------------------------------------
+DEBUG = False if IS_PROD else True
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# ------------------------------------------------------------
+# Hosts & CORS
+# ------------------------------------------------------------
+ALLOWED_HOSTS = [h for h in os.getenv('DJANGO_ALLOWED_HOSTS', '').split(',') if h] if IS_PROD else ['localhost', '127.0.0.1']
+CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", "").split(',') if IS_PROD else [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000"
+]
+CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',') if IS_PROD else ["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:3000"]
 
-ALLOWED_HOSTS = []
+# ------------------------------------------------------------
+# Cookies
+# ------------------------------------------------------------
+SESSION_COOKIE_SECURE = True if IS_PROD else False
+CSRF_COOKIE_SECURE = True if IS_PROD else False
+SESSION_COOKIE_HTTPONLY = True if IS_PROD else False
+SESSION_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_SAMESITE = 'Lax'
 
-# Application definition
+# ------------------------------------------------------------
+# HTTPS & HSTS
+# ------------------------------------------------------------
+SECURE_SSL_REDIRECT = True if IS_PROD else False
+SECURE_HSTS_SECONDS = int(os.getenv('SECURE_HSTS_SECONDS', '31536000')) if IS_PROD else 0
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True if IS_PROD else False
+SECURE_HSTS_PRELOAD = True if IS_PROD else False
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') if IS_PROD else None
+
+# ------------------------------------------------------------
+# Security Headers
+# ------------------------------------------------------------
+SECURE_CONTENT_TYPE_NOSNIFF = True if IS_PROD else False
+X_FRAME_OPTIONS = 'DENY' if IS_PROD else 'SAMEORIGIN'
+SECURE_REFERRER_POLICY = 'same-origin' if IS_PROD else None
+
+# ------------------------------------------------------------
+# Installed Apps & Middleware
+# ------------------------------------------------------------
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -49,6 +97,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    # WhiteNoise middleware (only used in prod)
+    'whitenoise.middleware.WhiteNoiseMiddleware' if IS_PROD else None,
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -58,10 +108,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",   # Vite default
-    "http://127.0.0.1:5173",
-]
+# Filter out None values in MIDDLEWARE (so it doesn't break dev)
+MIDDLEWARE = [mw for mw in MIDDLEWARE if mw]
 
 CORS_ALLOW_HEADERS = list(default_headers) + [
     'x-frontend-key',
@@ -71,6 +119,9 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
 FE_TOKEN = os.getenv('FE_TOKEN', 'dev-secret_23451@@@!!!!') 
 
 
+# ------------------------------------------------------------ 
+# URL Configuration & Templates
+# ------------------------------------------------------------
 ROOT_URLCONF = 'lupus_backend.urls'
 
 TEMPLATES = [
@@ -91,23 +142,48 @@ TEMPLATES = [
 WSGI_APPLICATION = 'lupus_backend.wsgi.application'
 
 
+# ------------------------------------------------------------ 
 # Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-       'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': 'db', # Docker service name for the database
-        'PORT': '5432',  # Default PostgreSQL port
+# ------------------------------------------------------------
+if IS_PROD:
+    print("Production database settings...")
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.getenv('DB_PROD_NAME'),
+            'USER': os.getenv('DB_PROD_USER'),
+            'PASSWORD': os.getenv('DB_PROD_PASSWORD'),
+            'HOST': os.getenv('DB_PROD_HOST'),
+            'PORT': os.getenv('DB_PROD_PORT', '5432'),
+            'OPTIONS': {
+                'sslmode': os.getenv('DB_PROD_SSL_MODE', 'require')
+            }
+        }
     }
-}
+else:
+    print("Development database settings...")
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.getenv('DB_DEV_NAME'),
+            'USER': os.getenv('DB_DEV_USER'),
+            'PASSWORD': os.getenv('DB_DEV_PASSWORD'),
+            'HOST': 'db',  # Docker service name for your local Postgres container
+            'PORT': '5432'
+        }
+    }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
+# ------------------------------------------------------------ 
+# Default primary key field type 
+# ------------------------------------------------------------
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# ------------------------------------------------------------ 
+# Password Validation 
+# ------------------------------------------------------------
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -124,24 +200,28 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
+# ------------------------------------------------------------ 
+# Internationalization 
+# ------------------------------------------------------------
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
+# ------------------------------------------------------------ 
+# Static files 
+# ------------------------------------------------------------
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+# WhiteNoise storage backend for production
+if IS_PROD:
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+# ------------------------------------------------------------ 
+# Default primary key field type 
+# ------------------------------------------------------------
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
