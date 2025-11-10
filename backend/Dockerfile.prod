@@ -1,0 +1,49 @@
+# Stage 1: build
+FROM python:3.13-slim AS builder
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+# System deps for build (libpq etc.)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential libpq-dev gettext \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install into builder
+COPY requirements.txt /app/
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy project files
+COPY . /app/
+
+# Collect static files (if you use WhiteNoise and staticfiles do not depend on DB)
+RUN python manage.py collectstatic --noinput
+
+# Stage 2: production image
+FROM python:3.13-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Create non-root user
+RUN useradd -m -r appuser && mkdir /app && chown -R appuser /app
+
+# Copy installed python packages from builder (safer: copy /usr/local)
+COPY --from=builder /usr/local /usr/local
+# Copy application code
+COPY --from=builder /app /app
+
+WORKDIR /app
+
+# Ensure correct permissions
+RUN chown -R appuser:appuser /app
+
+USER appuser
+
+EXPOSE 8000
+
+# Use the project WSGI path:
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "lupus_backend.wsgi:application"]
