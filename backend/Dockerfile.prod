@@ -46,4 +46,4 @@ USER appuser
 EXPOSE 8000
 
 # Use the project WSGI path:
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "lupus_backend.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "--timeout", "120", "lupus_backend.wsgi:application"]
