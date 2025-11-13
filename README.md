@@ -12,6 +12,7 @@
 - [Screenshots](#screenshots)
 - [Security](#security)
 - [Testing](#testing)
+- [Performance](#performance)
 - [Acknowledgment](#acknowledgment)
 - [Notes](#notes)
 - [Disclaimer](#disclaimer)
@@ -195,6 +196,12 @@ This section tracks backend tests as they are added. Each test includes a short 
 | Test Name                                          | Description                                                                                                                   | Why It’s Useful                                                                                                                                                                                                                | Result |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
 | **Frontend–Backend Shared Secret Token Handshake** | Verified that requests with the correct shared secret token succeed, and invalid or missing tokens return `401 Unauthorized`. | Protects the backend from unauthorized requests or bots, ensures only your frontend or trusted clients can submit data to sensitive endpoints, and adds a lightweight layer of security even without full user authentication. | PASSED |
+
+---
+
+### Performance
+
+### Frontend:
 
 ---
 
