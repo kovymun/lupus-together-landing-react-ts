@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from urllib.parse import urlparse, parse_qsl
 import secrets
 from corsheaders.defaults import default_headers
 
@@ -146,22 +147,19 @@ WSGI_APPLICATION = 'lupus_backend.wsgi.application'
 # Database
 # ------------------------------------------------------------
 if IS_PROD:
-    print("Production database settings...")
+    tmpPostgres = urlparse(os.getenv("DATABASE_URL"))
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.getenv('DB_PROD_NAME'),
-            'USER': os.getenv('DB_PROD_USER'),
-            'PASSWORD': os.getenv('DB_PROD_PASSWORD'),
-            'HOST': os.getenv('DB_PROD_HOST'),
-            'PORT': os.getenv('DB_PROD_PORT', '5432'),
-            'OPTIONS': {
-                'sslmode': os.getenv('DB_PROD_SSL_MODE', 'require')
-            }
+            'NAME': tmpPostgres.path.replace('/', ''),
+            'USER': tmpPostgres.username,
+            'PASSWORD': tmpPostgres.password,
+            'HOST': tmpPostgres.hostname,
+            'PORT': 5432,
+            'OPTIONS': dict(parse_qsl(tmpPostgres.query)),
         }
     }
 else:
-    print("Development database settings...")
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
