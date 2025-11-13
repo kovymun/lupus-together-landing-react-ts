@@ -86,6 +86,7 @@ const JoinForm = () => {
           }
         );
 
+  // Deployed Django Backend
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const BE_API_KEY = import.meta.env.VITE_BKE_KEY;
 

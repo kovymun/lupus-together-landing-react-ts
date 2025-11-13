@@ -222,7 +222,6 @@ Images used are royalty-free and sourced from **[Unsplash](https://unsplash.com/
 
 - **Migrate to Astro.js**: for improved app performance and enhanced SEO/GEO capabilities.
 - **Scroll-triggered Animations**: for a smoother, more interactive visual experience.
-- **Deploy to Production**: make the project live and accessible to users.
 
 ---
 
