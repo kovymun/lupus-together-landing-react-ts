@@ -129,17 +129,21 @@ This project is deployed using modern, production capable platforms using free t
 
 ### Screenshots
 
-<img width="790" height="349" alt="Lupus Together Hero section" src="https://github.com/user-attachments/assets/05e3200e-2292-46a8-8406-d82d31184281" />
-<br/>
-<img width="405" height="362" alt="Lupus Together About section" src="https://github.com/user-attachments/assets/cb6f361f-b895-4383-81bd-814cad9ff855" />
-<br/>
-<img width="405" height="405" alt="Lupus Together Understanding Lupus section" src="https://github.com/user-attachments/assets/896c5ea3-a8c7-40a5-adc6-e4ef93a12e13" />
-<br/>
-<img width="404" height="322" alt="Lupus Together Testimonial section" src="https://github.com/user-attachments/assets/ea950122-8ca7-4bf0-87d1-8dfac3efcfae" />
-<br/>
-<img width="405" height="321" alt="Image" src="https://github.com/user-attachments/assets/49389ba8-c0b6-4ba0-8063-888f8387f89b" />
-<br/>
-<img width="405" height="373" alt="Image" src="https://github.com/user-attachments/assets/8c1d78f0-b7eb-4508-b6e3-cb1b2a102cc2" />
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 16px;">
+
+  <img src="https://github.com/user-attachments/assets/05e3200e-2292-46a8-8406-d82d31184281" alt="Lupus Together Hero section" />
+
+  <img src="https://github.com/user-attachments/assets/cb6f361f-b895-4383-81bd-814cad9ff855" alt="Lupus Together About section" />
+
+  <img src="https://github.com/user-attachments/assets/896c5ea3-a8c7-40a5-adc6-e4ef93a12e13" alt="Lupus Together Understanding Lupus section" />
+
+  <img src="https://github.com/user-attachments/assets/ea950122-8ca7-4bf0-87d1-8dfac3efcfae" alt="Lupus Together Testimonial section" />
+
+  <img src="https://github.com/user-attachments/assets/49389ba8-c0b6-4ba0-8063-888f8387f89b" alt="Additional screenshot" />
+
+  <img src="https://github.com/user-attachments/assets/8c1d78f0-b7eb-4508-b6e3-cb1b2a102cc2" alt="Additional screenshot" />
+
+</div>
 
 ---
 
