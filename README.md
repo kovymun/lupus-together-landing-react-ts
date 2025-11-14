@@ -9,6 +9,7 @@
 - [Tech Stack](#tech-stack)
 - [Installation Guide](#installation-guide)
 - [Usage Guide](#usage-guide)
+- [Production Deployment](#production-deployment)
 - [Screenshots](#screenshots)
 - [Security](#security)
 - [Testing](#testing)
@@ -111,6 +112,18 @@ This website/landing page is structured into several key sections designed to gu
 6. **Feel the Human Stories:** The testimonial section features powerful community voices to help users feel seen and connected.
 7. **Meet the Team:** Discover the faces behind the platform, the people dedicated to fostering support.
 8. **Join the Community:** Fill out the form to express interest in becoming part of the Lupus Together support circle.
+
+---
+
+### Production Deployment
+
+This project is deployed using modern, production capable platforms using free tier plans, and configured for real world demonstration. You can access the live application here: [Lupus Together](https://lupustogether.vercel.app/)
+
+1. **Frontend (React + TypeScript):** Deployed on **Vercel** using its free tier, providing fast static delivery and global CDN caching.
+2. **Backend (Django REST API):** Hosted on **Render** (free tier) with automatic builds and zero downtime deploys during updates.
+3. **Database:** Backed by **Neon Serverless PostgreSQL** (free tier): a cloud native, scalable database service. [Neon](https://neon.com/)
+
+**Note:** This deployment uses free tier plans suitable for demonstration. While the stack is production capable, free tiers may introduce limits such as sleeping or reduced performance under heavy load, but the deployment architecture follows industry standard practices.
 
 ---
 
