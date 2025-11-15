@@ -1,10 +1,10 @@
-## Lupus Together Community Website: React, TypeScript Frontend + Python Django Backend
+## Lupus Together Community Website: React + TypeScript Frontend | Python Django Backend | Neon Serverless PostgreSQL
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3) ![React Scroll](https://img.shields.io/badge/React--Scroll-61DAFB?style=for-the-badge) ![React Icons](https://img.shields.io/badge/React--Icons-000000?style=for-the-badge) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Axe DevTools](https://img.shields.io/badge/Axe%20DevTools-663399?style=for-the-badge&logo=axe&logoColor=white) ![Google Lighthouse](https://img.shields.io/badge/Google%20Lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=white) ![Cypress](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
 
 ### Table of Contents
 
-- [Description and Purpose](#description-and-purpose)
+- [Overview](#overview)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Installation Guide](#installation-guide)
@@ -23,26 +23,31 @@
 
 ---
 
-### Description and Purpose
+### Overview
 
-Lupus Together is a front-end landing page built with care, empathy, and intention. Inspired by a loved one's journey with Lupus, this project serves as a heartfelt digital space for awareness, connection, and support.
+**Lupus Together** is a compassionate, community focused awareness site built with **React + TypeScript** and powered by a secure **Django REST API**. Inspired by a loved one's journey with Lupus, this project blends human centered design with production style development to create a digital space for awareness, connection, and support.
 
-Built using React, TypeScript, and Vanilla CSS for the frontend, and Django with Django REST Framework for the backend, it follows landing page best practices while providing a secure, reliable, and scalable API. The backend handles data storage, input validation, and safe communication with the frontend, ensuring user submissions are processed correctly and securely.
+**Highlights**
 
-This personal project combines thoughtful UI/UX with meaningful storytelling to gently educate, uplift, and welcome future members into a compassionate community.
+- Thoughtful UI/UX, SEO optimization, and accessibility-first design (WCAG 2.1 AA)
+- Fully responsive design with intuitive navigation (React Scroll)
+- Modern frontend engineering (React, TypeScript, Vite)
+- Secure backend API architecture (Django + DRF, serializer validation)
+- Real-world deployment pipeline (Vercel, Render, Neon Serverless PostgreSQL)
+- Integration, E2E, and quality testing (Cypress, pytest, Axe, Lighthouse)
 
 ---
 
 ### Features
 
-1. Smooth, intuitive navigation using **React Scroll** for section-based browsing.
-2. **Fully responsive design** for mobile, tablet, and desktop.
-3. Content-first layout designed to raise awareness and build community.
-4. Modern CSS techniques, including **Flexbox**, **Grid**, and `clamp()` for fluid typography.
-5. **Light and dark mode themes** that automatically adapt to the user’s system preference, improving accessibility and comfort.
-6. **Accessibility First Design:** Fully aligned with **WCAG 2.1 AA** standards for inclusive, user friendly, and SEO optimized experiences.
-7. **Form and input validation** with React Hook Form on the frontend and DRF serializers on the backend, ensuring all user-submitted data meets required criteria before reaching the database.
-8. **Secure POST requests** with a **shared secret token handshake** between the _frontend_ and _backend_, ensuring only trusted clients can submit data and preventing unauthorized or automated (bot) submissions.
+1. Smooth section navigation using **React Scroll**.
+2. Fully responsive layout across mobile, tablet, and desktop.
+3. Content-first, SEO-optimized, accessibility-focused UI/UX.
+4. Modern CSS architecture: Grid, Flexbox, and fluid typography (`clamp()`).
+5. Automatic light/dark theme detection.
+6. WCAG 2.1 AA–aligned accessibility implementation.
+7. Full-stack form validation (frontend + backend).
+8. Secure POST submissions via a **shared-secret token handshake**.
 
 ---
 
