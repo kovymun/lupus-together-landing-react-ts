@@ -166,7 +166,7 @@ else:
             'NAME': os.getenv('DB_DEV_NAME'),
             'USER': os.getenv('DB_DEV_USER'),
             'PASSWORD': os.getenv('DB_DEV_PASSWORD'),
-            'HOST': 'db',  # Docker service name for your local Postgres container
+            'HOST': 'localhost',  # 'db' for Docker service name - for your local Postgres container
             'PORT': '5432'
         }
     }
